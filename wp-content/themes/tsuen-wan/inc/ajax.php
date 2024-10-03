@@ -150,8 +150,8 @@ function get_shops(){
 	if($_POST["type"] == "dinings"){
 		$post_type = "dinings";
 		$post_tax = "dining-categories";
-	}elseif($_POST["type"] == "shoppings"){
-		$post_type = "shoppings";
+	}elseif($_POST["type"] == "shops"){
+		$post_type = "shops";
 		$post_tax = "shop-categories";
 	}else{
 		$return["status"] = 2;
@@ -235,4 +235,4 @@ function get_shops(){
 
 add_action( 'wp_ajax_get_search', 'get_search' );
 add_action( 'wp_ajax_nopriv_get_search', 'get_search' );
-add_action( 'wp_ajax_nopriv_get_shops', 'get_shops' );
+add_action( 'wp_ajax_get_shops', 'get_shops' );

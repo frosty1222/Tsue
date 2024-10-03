@@ -1,7 +1,7 @@
-0000.000 (1) Opened log file at time: Thu, 03 Oct 2024 07:32:26 +0000 on http://localhost/Tsue
-0000.004 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.6 WP: 6.6.2 PHP: 8.3.8 (apache2handler, Windows NT DESKTOP-PNE4FM5 10.0 build 22000 (Windows 11) AMD64) MySQL: 8.0.30 (max packet size=536870912) WPLANG: en_US Server: Apache/2.4.54 (Win64) OpenSSL/1.1.1q PHP/8.3.8 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 29.7M | 34M) multisite: N openssl: OpenSSL 3.0.13 30 Jan 2024 mcrypt: N LANG:  ZipArchive::addFile: N
-0000.017 (1) Free space on disk containing Updraft's temporary directory: 105769.1 MB
-0000.026 (1) Requesting backup semaphore lock (0a8a53bb9967)
-0000.040 (1) [Debug] Lock option (updraft_lock_0a8a53bb9967, wp_options) was created in the database
-0000.043 (1) [Info] Lock (updraft_lock_0a8a53bb9967, wp_options) acquired after initialising the database
-0000.079 (1) This backup task (0a8a53bb9967) is either complete or began over 2 days ago: ending (1727940746.2655, ) (existing jobdata keys: )
+0000.000 (1) Opened log file at time: Thu, 03 Oct 2024 14:31:56 +0000 on http://localhost/Tsue
+0000.003 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.2 WP: 6.6.2 PHP: 8.1.10 (apache2handler, Windows NT ADMIN 10.0 build 19045 (Windows 10) AMD64) MySQL: 8.0.30 (max packet size=536870912) WPLANG: en_US Server: Apache/2.4.54 (Win64) OpenSSL/1.1.1q PHP/8.1.10 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 79.7M | 104M) multisite: N openssl: OpenSSL 1.1.1q  5 Jul 2022 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.005 (1) Free space on disk containing Updraft's temporary directory: 22748.2 MB
+0000.007 (1) Requesting backup semaphore lock (0a8a53bb9967)
+0000.010 (1) [Debug] Lock option (updraft_lock_0a8a53bb9967, wp_options) was created in the database
+0000.011 (1) [Info] Lock (updraft_lock_0a8a53bb9967, wp_options) acquired after initialising the database
+0000.012 (1) This backup task (0a8a53bb9967) is either complete or began over 2 days ago: ending (1727965916.815, ) (existing jobdata keys: )

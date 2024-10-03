@@ -6,10 +6,13 @@
  */
 get_header() ;
 $lang = pll_current_language();
-
-$post_type = "shoppings";
-$post_category = "shop_categories";
-$post_page_id = $post_type."_page";
+$post_types = get_post_types([], 'objects');
+foreach ($post_types as $post_type) {
+	echo '<li>' . esc_html($post_type->label) . ' (slug: ' . esc_html($post_type->name) . ')</li>';
+}
+$post_type = "shops";
+$post_category = "shop-categories";
+$post_page_id = $post_type."-page";
 
 $shop_terms = get_terms( array(
 	'taxonomy' => $post_category,
