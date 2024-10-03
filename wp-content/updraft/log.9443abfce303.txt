@@ -1,0 +1,405 @@
+0000.150 () Opened log file at time: Thu, 03 Oct 2024 07:31:23 +0000 on http://localhost/Tsue
+0000.150 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.6 WP: 6.6.2 PHP: 8.3.8 (apache2handler, Windows NT DESKTOP-PNE4FM5 10.0 build 22000 (Windows 11) AMD64) MySQL: 8.0.30 (max packet size=536870912) WPLANG: en_US Server: Apache/2.4.54 (Win64) OpenSSL/1.1.1q PHP/8.3.8 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 40.2M | 42M) multisite: N openssl: OpenSSL 3.0.13 30 Jan 2024 mcrypt: N LANG:  ZipArchive::addFile: N
+0000.151 () Free space on disk containing Updraft's temporary directory: 106134.7 MB
+0000.253 () Restore setup, now closing connection and starting restore over AJAX.
+0000.010 () Opened log file at time: Thu, 03 Oct 2024 07:31:24 +0000 on http://localhost/Tsue
+0000.010 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.6 WP: 6.6.2 PHP: 8.3.8 (apache2handler, Windows NT DESKTOP-PNE4FM5 10.0 build 22000 (Windows 11) AMD64) MySQL: 8.0.30 (max packet size=536870912) WPLANG: en_US Server: Apache/2.4.54 (Win64) OpenSSL/1.1.1q PHP/8.3.8 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 37M | 40M) multisite: N openssl: OpenSSL 3.0.13 30 Jan 2024 mcrypt: N LANG:  ZipArchive::addFile: N
+0000.011 () Free space on disk containing Updraft's temporary directory: 106134.3 MB
+0000.055 () Ensuring WP_Filesystem is setup for a restore
+0000.058 () WP_Filesystem is setup and ready for a restore
+0000.068 () Restore job started. Entities to restore: themes, uploads, others, db. Restore options: {"updraft_restorer_collate":"utf8mb4_general_ci","updraft_restorer_replacesiteurl":"1","include_unspecified_tables":false,"tables_to_restore":["tsw_options","tsw_users","tsw_usermeta","tsw_actionscheduler_actions","tsw_actionscheduler_claims","tsw_actionscheduler_groups","tsw_actionscheduler_logs","tsw_commentmeta","tsw_comments","tsw_imagify_files","tsw_imagify_folders","tsw_links","tsw_postmeta","tsw_posts","tsw_term_relationships","tsw_term_taxonomy","tsw_termmeta","tsw_terms","tsw_wpr_rocket_cache","tsw_wpr_rucss_used_css","tsw_cff_facebook_feed_locator","tsw_cff_feed_caches","tsw_cff_feeds","tsw_cff_sources","tsw_ctf_feed_caches","tsw_ctf_feed_locator","tsw_ctf_feeds","tsw_ctf_feeds_posts","tsw_ctf_posts","tsw_gdpr_cc_options","tsw_postexpirator_debug","tsw_ppfuture_actions_args","tsw_sbi_feed_caches","tsw_sbi_feeds","tsw_sbi_instagram_feed_locator","tsw_sbi_instagram_feeds_posts","tsw_sbi_instagram_posts","tsw_sbi_sources","tsw_sbr_feed_caches","tsw_sbr_feed_locator","tsw_sbr_feeds","tsw_sbr_reviews_posts","tsw_sbr_sources","tsw_sbtt_feed_caches","tsw_sbtt_feed_locator","tsw_sbtt_feeds","tsw_sbtt_sources","tsw_sbtt_tiktok_posts","tsw_sby_feed_caches","tsw_sby_feed_locator","tsw_sby_feeds","tsw_wpfm_backup"],"tables_to_skip":[],"updraft_encryptionphrase":"","updraft_restorer_wpcore_includewpconfig":false,"updraft_incremental_restore_point":-1}
+0000.072 () PHP event: code E_WARNING: mkdir(): File exists (line 558, C:\laragon\www\Tsue\wp-admin\includes\class-wp-filesystem-direct.php)
+0000.087 () Will not delete any archives after unpacking them, because there was no cloud storage for this backup
+0000.100 () Entity: db
+0000.100 () restore_backup(backup_file=backup_2024-09-30-1741_Tsuen_wan_0a8a53bb9967-db.gz, type=db, info=a:0:{}, last_one=)
+0000.101 () Unpacking backup... (backup_2024-09-30-1741_Tsuen_wan_0a8a53bb9967-db.gz, 2.3 Mb)
+0000.101 () PHP event: code E_WARNING: mkdir(): File exists (line 558, C:\laragon\www\Tsue\wp-admin\includes\class-wp-filesystem-direct.php)
+0000.105 () Database successfully unpacked
+0000.107 () Restoring the database (on a large site this can take a long time - if it times out (which can happen if your web hosting company has configured your hosting to limit resources) then you should use a different method, such as phpMyAdmin)...
+0000.115 () Using direct MySQL access; value of use_mysqli is: 1
+0000.116 () SQL compatibility mode is: NO_AUTO_VALUE_ON_ZERO,NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
+0000.220 () Max packet size: 512 MB
+0000.221 () Entering maintenance mode
+0000.221 () Enabling Maintenance mode&#8230;
+0000.403 () Backup of: https://twp-www.cloudtest.shkp.com
+0000.436 () Content URL: https://twp-www.cloudtest.shkp.com/wp-content
+0000.436 () Uploads URL: https://twp-www.cloudtest.shkp.com/wp-content/uploads
+0000.437 () Old table prefix: tsw_
+0000.437 () Old ABSPATH: /src/public/
+0000.437 () UpdraftPlus plugin slug: updraftplus/updraftplus.php
+0000.437 () Site information: multisite=0
+0000.437 () Site information: sql_mode=
+0000.438 () Skipped tables: wp_commentmeta, wp_comments, wp_links, wp_options, wp_postmeta, wp_posts, wp_term_relationships, wp_term_taxonomy, wp_termmeta, wp_terms, wp_usermeta, wp_users
+0000.439 () Skipped execution of SQL statement (unwanted or internally handled type=18): /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+0000.440 () New table prefix: 81_
+0000.455 () Processing table (InnoDB): tsw_options - will restore as: 81_options
+0001.968 () Atomic restore: dropping original table (wp_options)
+0002.040 () Atomic restore: renaming new table (81_options) to final table name (wp_options)
+0002.096 () Restoring prior UD configuration (table: wp_options; keys: 102)
+0002.779 () PHP event: code E_DEPRECATED: substr(): Passing null to parameter #1 ($string) of type string is deprecated (line 169, C:\laragon\www\Tsue\wp-content\plugins\updraftplus\includes\class-manipulation-functions.php)
+0002.779 () PHP event: code E_DEPRECATED: substr(): Passing null to parameter #1 ($string) of type string is deprecated (line 169, C:\laragon\www\Tsue\wp-content\plugins\updraftplus\includes\class-manipulation-functions.php)
+0002.779 () PHP event: code E_DEPRECATED: preg_match(): Passing null to parameter #2 ($subject) of type string is deprecated (line 169, C:\laragon\www\Tsue\wp-content\plugins\updraftplus\includes\class-manipulation-functions.php)
+0002.780 () PHP event: code E_DEPRECATED: substr(): Passing null to parameter #1 ($string) of type string is deprecated (line 169, C:\laragon\www\Tsue\wp-content\plugins\updraftplus\includes\class-manipulation-functions.php)
+0002.780 () PHP event: code E_DEPRECATED: substr(): Passing null to parameter #1 ($string) of type string is deprecated (line 169, C:\laragon\www\Tsue\wp-content\plugins\updraftplus\includes\class-manipulation-functions.php)
+0002.780 () PHP event: code E_DEPRECATED: preg_match(): Passing null to parameter #2 ($subject) of type string is deprecated (line 169, C:\laragon\www\Tsue\wp-content\plugins\updraftplus\includes\class-manipulation-functions.php)
+0002.835 () PHP event: code E_DEPRECATED: preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated (line 48, C:\laragon\www\Tsue\wp-content\plugins\updraftplus\includes\class-manipulation-functions.php)
+0002.864 () PHP event: code E_DEPRECATED: preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated (line 48, C:\laragon\www\Tsue\wp-content\plugins\updraftplus\includes\class-manipulation-functions.php)
+0002.868 () PHP event: code E_DEPRECATED: preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated (line 48, C:\laragon\www\Tsue\wp-content\plugins\updraftplus\includes\class-manipulation-functions.php)
+0003.092 () PHP event: code E_DEPRECATED: preg_match(): Passing null to parameter #2 ($subject) of type string is deprecated (line 268, C:\laragon\www\Tsue\wp-content\plugins\updraftplus\options.php)
+0003.097 () PHP event: code E_DEPRECATED: preg_match(): Passing null to parameter #2 ($subject) of type string is deprecated (line 268, C:\laragon\www\Tsue\wp-content\plugins\updraftplus\options.php)
+0003.425 () Table prefix has changed: changing options table field(s) accordingly (options)
+0003.428 () Options table fields changed OK
+0003.441 () WP Rocket CDN option detected: disabling the option
+0003.451 () Search and replacing table: wp_options: rows: 1295
+0003.491 () Incomplete object detected in database: FS_Plugin; Search and replace will be skipped for these entries
+0003.605 () Processing table (InnoDB): tsw_users - will restore as: 81_users
+0003.871 () Atomic restore: dropping original table (wp_users)
+0003.893 () Atomic restore: renaming new table (81_users) to final table name (wp_users)
+0003.921 () Search and replacing table: wp_users: rows: 6
+0003.925 () Processing table (InnoDB): tsw_usermeta - will restore as: 81_usermeta
+0004.037 () Atomic restore: dropping original table (wp_usermeta)
+0004.050 () Atomic restore: renaming new table (81_usermeta) to final table name (wp_usermeta)
+0004.065 () Table prefix has changed: changing usermeta table field(s) accordingly
+0004.071 () Usermeta table fields changed OK
+0004.077 () Search and replacing table: wp_usermeta: rows: 186
+0004.085 () Processing table (InnoDB): tsw_actionscheduler_actions - will restore as: 81_actionscheduler_actions
+0004.245 () Atomic restore: dropping original table (wp_actionscheduler_actions)
+0004.248 () Atomic restore: renaming new table (81_actionscheduler_actions) to final table name (wp_actionscheduler_actions)
+0004.277 () Search and replacing table: wp_actionscheduler_actions: rows: 136
+0004.278 () Incomplete object detected in database: ActionScheduler_SimpleSchedule; Search and replace will be skipped for these entries
+0004.279 () Incomplete object detected in database: ActionScheduler_NullSchedule; Search and replace will be skipped for these entries
+0004.840 () Processing table (InnoDB): tsw_actionscheduler_claims - will restore as: 81_actionscheduler_claims
+0004.918 () Atomic restore: dropping original table (wp_actionscheduler_claims)
+0004.923 () Atomic restore: renaming new table (81_actionscheduler_claims) to final table name (wp_actionscheduler_claims)
+0004.952 () Search and replacing table: wp_actionscheduler_claims: rows: 0
+0004.952 () Processing table (InnoDB): tsw_actionscheduler_groups - will restore as: 81_actionscheduler_groups
+0005.054 () Atomic restore: dropping original table (wp_actionscheduler_groups)
+0005.065 () Atomic restore: renaming new table (81_actionscheduler_groups) to final table name (wp_actionscheduler_groups)
+0005.087 () Search and replacing table: wp_actionscheduler_groups: rows: 3
+0005.088 () Processing table (InnoDB): tsw_actionscheduler_logs - will restore as: 81_actionscheduler_logs
+0005.212 () Atomic restore: dropping original table (wp_actionscheduler_logs)
+0005.220 () Atomic restore: renaming new table (81_actionscheduler_logs) to final table name (wp_actionscheduler_logs)
+0005.239 () Search and replacing table: wp_actionscheduler_logs: rows: 388
+0005.249 () Processing table (InnoDB): tsw_commentmeta - will restore as: 81_commentmeta
+0005.346 () Atomic restore: dropping original table (wp_commentmeta)
+0005.357 () Atomic restore: renaming new table (81_commentmeta) to final table name (wp_commentmeta)
+0005.384 () Search and replacing table: wp_commentmeta: rows: 0
+0005.384 () Processing table (InnoDB): tsw_comments - will restore as: 81_comments
+0005.491 () Atomic restore: dropping original table (wp_comments)
+0005.505 () Atomic restore: renaming new table (81_comments) to final table name (wp_comments)
+0005.539 () Search and replacing table: wp_comments: rows: 0
+0005.539 () Processing table (InnoDB): tsw_imagify_files - will restore as: 81_imagify_files
+0005.654 () Atomic restore: dropping original table (wp_imagify_files)
+0005.659 () Atomic restore: renaming new table (81_imagify_files) to final table name (wp_imagify_files)
+0005.687 () Search and replacing table: wp_imagify_files: rows: 0
+0005.688 () Processing table (InnoDB): tsw_imagify_folders - will restore as: 81_imagify_folders
+0005.880 () Atomic restore: dropping original table (wp_imagify_folders)
+0005.886 () Atomic restore: renaming new table (81_imagify_folders) to final table name (wp_imagify_folders)
+0005.911 () Search and replacing table: wp_imagify_folders: rows: 0
+0005.911 () Processing table (InnoDB): tsw_links - will restore as: 81_links
+0005.996 () Atomic restore: dropping original table (wp_links)
+0006.017 () Atomic restore: renaming new table (81_links) to final table name (wp_links)
+0006.041 () Search and replacing table: wp_links: rows: 0
+0006.041 () Processing table (InnoDB): tsw_postmeta - will restore as: 81_postmeta
+0013.983 () Database queries processed: 50 in 13.86 seconds
+0018.836 () Atomic restore: dropping original table (wp_postmeta)
+0018.855 () Atomic restore: renaming new table (81_postmeta) to final table name (wp_postmeta)
+0019.501 () Search and replacing table: wp_postmeta: rows: 605
+0021.447 () Processing table (InnoDB): tsw_posts - will restore as: 81_posts
+0022.927 () Atomic restore: dropping original table (wp_posts)
+0022.946 () Atomic restore: renaming new table (81_posts) to final table name (wp_posts)
+0022.972 () Skipping search/replace on GUID column in posts table
+0022.977 () Search and replacing table: wp_posts: rows: 4126
+0023.278 () Processing table (InnoDB): tsw_term_relationships - will restore as: 81_term_relationships
+0023.513 () Atomic restore: dropping original table (wp_term_relationships)
+0023.523 () Atomic restore: renaming new table (81_term_relationships) to final table name (wp_term_relationships)
+0023.539 () Skipping this table: data in this table (wp_term_relationships) should not be search/replaced
+0023.539 () Processing table (InnoDB): tsw_term_taxonomy - will restore as: 81_term_taxonomy
+0023.715 () Atomic restore: dropping original table (wp_term_taxonomy)
+0023.733 () Atomic restore: renaming new table (81_term_taxonomy) to final table name (wp_term_taxonomy)
+0023.772 () Search and replacing table: wp_term_taxonomy: rows: 314
+0023.787 () Processing table (InnoDB): tsw_termmeta - will restore as: 81_termmeta
+0023.915 () Atomic restore: dropping original table (wp_termmeta)
+0023.924 () Atomic restore: renaming new table (81_termmeta) to final table name (wp_termmeta)
+0023.950 () Search and replacing table: wp_termmeta: rows: 30
+0023.951 () Processing table (InnoDB): tsw_terms - will restore as: 81_terms
+0024.049 () Atomic restore: dropping original table (wp_terms)
+0024.062 () Atomic restore: renaming new table (81_terms) to final table name (wp_terms)
+0024.096 () Search and replacing table: wp_terms: rows: 314
+0024.105 () Processing table (InnoDB): tsw_wpr_rocket_cache - will restore as: 81_wpr_rocket_cache
+0024.207 () Atomic restore: dropping original table (wp_wpr_rocket_cache)
+0024.211 () Atomic restore: renaming new table (81_wpr_rocket_cache) to final table name (wp_wpr_rocket_cache)
+0024.235 () Search and replacing table: wp_wpr_rocket_cache: rows: 203
+0025.414 () Processing table (InnoDB): tsw_wpr_rucss_used_css - will restore as: 81_wpr_rucss_used_css
+0025.524 () Atomic restore: dropping original table (wp_wpr_rucss_used_css)
+0025.529 () Atomic restore: renaming new table (81_wpr_rucss_used_css) to final table name (wp_wpr_rucss_used_css)
+0025.553 () Search and replacing table: wp_wpr_rucss_used_css: rows: 0
+0025.553 () Processing table (InnoDB): tsw_cff_facebook_feed_locator - will restore as: 81_cff_facebook_feed_locator
+0025.652 () Atomic restore: dropping original table (wp_cff_facebook_feed_locator)
+0025.667 () Atomic restore: renaming new table (81_cff_facebook_feed_locator) to final table name (wp_cff_facebook_feed_locator)
+0025.692 () Search and replacing table: wp_cff_facebook_feed_locator: rows: 0
+0025.692 () Processing table (InnoDB): tsw_cff_feed_caches - will restore as: 81_cff_feed_caches
+0025.893 () Atomic restore: dropping original table (wp_cff_feed_caches)
+0025.898 () Atomic restore: renaming new table (81_cff_feed_caches) to final table name (wp_cff_feed_caches)
+0025.918 () Search and replacing table: wp_cff_feed_caches: rows: 0
+0025.918 () Processing table (InnoDB): tsw_cff_feeds - will restore as: 81_cff_feeds
+0025.990 () Atomic restore: dropping original table (wp_cff_feeds)
+0025.997 () Atomic restore: renaming new table (81_cff_feeds) to final table name (wp_cff_feeds)
+0026.016 () Search and replacing table: wp_cff_feeds: rows: 0
+0026.016 () Processing table (InnoDB): tsw_cff_sources - will restore as: 81_cff_sources
+0026.088 () Atomic restore: dropping original table (wp_cff_sources)
+0026.095 () Database queries processed: 100 in 25.97 seconds
+0026.096 () Atomic restore: renaming new table (81_cff_sources) to final table name (wp_cff_sources)
+0026.117 () Search and replacing table: wp_cff_sources: rows: 0
+0026.117 () Processing table (InnoDB): tsw_ctf_feed_caches - will restore as: 81_ctf_feed_caches
+0026.190 () Atomic restore: dropping original table (wp_ctf_feed_caches)
+0026.193 () Atomic restore: renaming new table (81_ctf_feed_caches) to final table name (wp_ctf_feed_caches)
+0026.232 () Search and replacing table: wp_ctf_feed_caches: rows: 0
+0026.233 () Processing table (InnoDB): tsw_ctf_feed_locator - will restore as: 81_ctf_feed_locator
+0026.331 () Atomic restore: dropping original table (wp_ctf_feed_locator)
+0026.336 () Atomic restore: renaming new table (81_ctf_feed_locator) to final table name (wp_ctf_feed_locator)
+0026.358 () Search and replacing table: wp_ctf_feed_locator: rows: 0
+0026.358 () Processing table (InnoDB): tsw_ctf_feeds - will restore as: 81_ctf_feeds
+0026.428 () Atomic restore: dropping original table (wp_ctf_feeds)
+0026.432 () Atomic restore: renaming new table (81_ctf_feeds) to final table name (wp_ctf_feeds)
+0026.449 () Search and replacing table: wp_ctf_feeds: rows: 0
+0026.449 () Processing table (InnoDB): tsw_ctf_feeds_posts - will restore as: 81_ctf_feeds_posts
+0026.522 () Atomic restore: dropping original table (wp_ctf_feeds_posts)
+0026.527 () Atomic restore: renaming new table (81_ctf_feeds_posts) to final table name (wp_ctf_feeds_posts)
+0026.547 () Search and replacing table: wp_ctf_feeds_posts: rows: 0
+0026.547 () Processing table (InnoDB): tsw_ctf_posts - will restore as: 81_ctf_posts
+0026.591 () Atomic restore: dropping original table (wp_ctf_posts)
+0026.600 () Atomic restore: renaming new table (81_ctf_posts) to final table name (wp_ctf_posts)
+0026.618 () Search and replacing table: wp_ctf_posts: rows: 0
+0026.619 () Processing table (InnoDB): tsw_gdpr_cc_options - will restore as: 81_gdpr_cc_options
+0026.619 () An error (1) occurred: COLLATION 'utf8mb4_general_ci' is not valid for CHARACTER SET 'utf8mb3' - SQL query was (type=2): CREATE TABLE `81_gdpr_cc_options` (  `id` int NOT NULL AUTO_INCREMENT,  `option_key` varchar(255) NOT NULL DEFAULT '1',  `option_value` longtext CHARACTER SET utf8 COLLATE utf8mb4_general_ci,  `site_id` int DEFAULT NULL,  `extras` longtext CHARACTER SET utf8 COLLATE utf8mb4_general_ci,  PRIMARY KEY (`id`)) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ;
+0026.622 () An error (2) occurred: Table 'tsue.81_gdpr_cc_options' doesn't exist - SQL query was (type=3): INSERT INTO `81_gdpr_cc_options` VALUES (31, 'moove_gdpr_infobar_visibility', 'visible', 1, NULL), (32, 'moove_gdpr_accept_button_enable', '1', 1, NULL), (33, 'moove_gdpr_reject_button_enable', '0', 1, NULL), (34, 'moove_gdpr_settings_button_enable', '0', 1, NULL), (35, 'moove_gdpr_close_button_enable', '0', 1, NULL), (36, 'gdpr_close_button_bhv', '1', 1, NULL), (37, 'moove_gdpr_colour_scheme', '2', 1, NULL), (38, 'gdpr_accesibility', '0', 1, NULL), (39, 'moove_gdpr_nonce', '5933115767', 1, NULL), (40, '_wp_http_referer', '/wp-admin/admin.php?page=moove-gdpr&tab=banner-settings&lang=sc', 1, NULL), (41, 'moove_gdpr_info_bar_content_en', '<p>Tsuen Wan Plaza uses cookies to improve your website experience. By continuing to browse our website, you are agreeing to the use of cookies. <a href="https://twp-www.cloudtest.shkp.com/privacy-policy/">Find out more here</a></p>\n', 1, NULL), (42, 'gdpr_bs_buttons_order', '["accept","reject","settings","close"]', 1, NULL), (43, 'moove_gdpr_infobar_accept_button_label_en', 'Accept', 1, NULL), (44, 'moove_gdpr_infobar_reject_button_label_en', 'Reject', 1, NULL), (45, 'moove_gdpr_infobar_settings_button_label_en', 'Settings', 1, NULL), (46, 'moove_gdpr_infobar_position', 'bottom', 1, NULL), (47, 'gdpr_initialization_delay', '2000', 1, NULL), (48, 'moove_gdpr_info_bar_content_sc', '<p>荃湾广场使用cookies来改善您的网站体验。继续浏览我们的网站，即表示您同意使用 cookie。 <a href="https://twp-www.cloudtest.shkp.com/sc/privacy-policy/">在此处了解更多信息</a></p>\n', 1, NULL), (49, 'moove_gdpr_infobar_accept_button_label_sc', '接受', 1, NULL), (50, 'moove_gdpr_infobar_reject_button_label_sc', 'Reject', 1, NULL), (51, 'moove_gdpr_infobar_settings_button_label_sc', 'Settings', 1, NULL), (52, 'moove_gdpr_info_bar_content_tc', '<p>荃灣廣場使用cookies來改善您的網站體驗。繼續瀏覽我們的網站，即表示您同意使用。 <a href="https://twp-www.cloudtest.shkp.com/tc/privacy-policy/">在此處了解更多</a></p>\n', 1, NULL), (53, 'moove_gdpr_infobar_accept_button_label_tc', '接受', 1, NULL), (54, 'moove_gdpr_infobar_reject_button_label_tc', 'Reject', 1, NULL), (55, 'moove_gdpr_infobar_settings_button_label_tc', 'Settings', 1, NULL);
+0026.655 () Atomic restore: dropping original table (wp_gdpr_cc_options)
+0026.670 () Atomic restore: renaming new table (81_gdpr_cc_options) to final table name (wp_gdpr_cc_options)
+0026.671 () An error (3) occurred: Table 'tsue.81_gdpr_cc_options' doesn't exist - SQL query was (type=14): ALTER TABLE `81_gdpr_cc_options` RENAME TO `wp_gdpr_cc_options`;
+0026.674 () PHP event: code E_WARNING: Undefined array key 0 (line 139, C:\laragon\www\Tsue\wp-content\plugins\updraftplus\includes\class-search-replace.php)
+0026.675 () PHP event: code E_WARNING: Trying to access array offset on null (line 139, C:\laragon\www\Tsue\wp-content\plugins\updraftplus\includes\class-search-replace.php)
+0026.675 () Search and replacing table: wp_gdpr_cc_options: rows: 
+0026.676 () Processing table (InnoDB): tsw_postexpirator_debug - will restore as: 81_postexpirator_debug
+0026.777 () Atomic restore: dropping original table (wp_postexpirator_debug)
+0026.782 () Atomic restore: renaming new table (81_postexpirator_debug) to final table name (wp_postexpirator_debug)
+0026.804 () Search and replacing table: wp_postexpirator_debug: rows: 0
+0026.804 () Processing table (InnoDB): tsw_ppfuture_actions_args - will restore as: 81_ppfuture_actions_args
+0026.901 () Atomic restore: dropping original table (wp_ppfuture_actions_args)
+0026.905 () Atomic restore: renaming new table (81_ppfuture_actions_args) to final table name (wp_ppfuture_actions_args)
+0026.953 () Search and replacing table: wp_ppfuture_actions_args: rows: 43
+0027.175 () Processing table (InnoDB): tsw_sbi_feed_caches - will restore as: 81_sbi_feed_caches
+0027.266 () Atomic restore: dropping original table (wp_sbi_feed_caches)
+0027.270 () Atomic restore: renaming new table (81_sbi_feed_caches) to final table name (wp_sbi_feed_caches)
+0027.299 () Search and replacing table: wp_sbi_feed_caches: rows: 16
+0027.301 () Processing table (InnoDB): tsw_sbi_feeds - will restore as: 81_sbi_feeds
+0027.401 () Atomic restore: dropping original table (wp_sbi_feeds)
+0027.413 () Atomic restore: renaming new table (81_sbi_feeds) to final table name (wp_sbi_feeds)
+0027.601 () Search and replacing table: wp_sbi_feeds: rows: 2
+0027.604 () Processing table (InnoDB): tsw_sbi_instagram_feed_locator - will restore as: 81_sbi_instagram_feed_locator
+0027.773 () Atomic restore: dropping original table (wp_sbi_instagram_feed_locator)
+0027.788 () Atomic restore: renaming new table (81_sbi_instagram_feed_locator) to final table name (wp_sbi_instagram_feed_locator)
+0027.814 () Search and replacing table: wp_sbi_instagram_feed_locator: rows: 2
+0027.815 () Processing table (InnoDB): tsw_sbi_instagram_feeds_posts - will restore as: 81_sbi_instagram_feeds_posts
+0027.934 () Atomic restore: dropping original table (wp_sbi_instagram_feeds_posts)
+0027.938 () Atomic restore: renaming new table (81_sbi_instagram_feeds_posts) to final table name (wp_sbi_instagram_feeds_posts)
+0027.957 () Search and replacing table: wp_sbi_instagram_feeds_posts: rows: 54
+0027.962 () Processing table (InnoDB): tsw_sbi_instagram_posts - will restore as: 81_sbi_instagram_posts
+0028.142 () Atomic restore: dropping original table (wp_sbi_instagram_posts)
+0028.147 () Atomic restore: renaming new table (81_sbi_instagram_posts) to final table name (wp_sbi_instagram_posts)
+0028.169 () Search and replacing table: wp_sbi_instagram_posts: rows: 54
+0028.174 () Processing table (InnoDB): tsw_sbi_sources - will restore as: 81_sbi_sources
+0028.273 () Atomic restore: dropping original table (wp_sbi_sources)
+0028.276 () Atomic restore: renaming new table (81_sbi_sources) to final table name (wp_sbi_sources)
+0028.303 () Search and replacing table: wp_sbi_sources: rows: 2
+0028.304 () Processing table (InnoDB): tsw_sbr_feed_caches - will restore as: 81_sbr_feed_caches
+0028.398 () Atomic restore: dropping original table (wp_sbr_feed_caches)
+0028.403 () Atomic restore: renaming new table (81_sbr_feed_caches) to final table name (wp_sbr_feed_caches)
+0028.427 () Search and replacing table: wp_sbr_feed_caches: rows: 0
+0028.427 () Processing table (InnoDB): tsw_sbr_feed_locator - will restore as: 81_sbr_feed_locator
+0028.540 () Atomic restore: dropping original table (wp_sbr_feed_locator)
+0028.546 () Atomic restore: renaming new table (81_sbr_feed_locator) to final table name (wp_sbr_feed_locator)
+0028.570 () Search and replacing table: wp_sbr_feed_locator: rows: 0
+0028.570 () Processing table (InnoDB): tsw_sbr_feeds - will restore as: 81_sbr_feeds
+0028.654 () Atomic restore: dropping original table (wp_sbr_feeds)
+0028.660 () Atomic restore: renaming new table (81_sbr_feeds) to final table name (wp_sbr_feeds)
+0028.698 () Search and replacing table: wp_sbr_feeds: rows: 0
+0028.699 () Processing table (InnoDB): tsw_sbr_reviews_posts - will restore as: 81_sbr_reviews_posts
+0028.852 () Atomic restore: dropping original table (wp_sbr_reviews_posts)
+0028.863 () Atomic restore: renaming new table (81_sbr_reviews_posts) to final table name (wp_sbr_reviews_posts)
+0028.897 () Search and replacing table: wp_sbr_reviews_posts: rows: 0
+0028.897 () Processing table (InnoDB): tsw_sbr_sources - will restore as: 81_sbr_sources
+0028.960 () Atomic restore: dropping original table (wp_sbr_sources)
+0028.971 () Atomic restore: renaming new table (81_sbr_sources) to final table name (wp_sbr_sources)
+0028.989 () Search and replacing table: wp_sbr_sources: rows: 0
+0028.989 () Processing table (InnoDB): tsw_sbtt_feed_caches - will restore as: 81_sbtt_feed_caches
+0029.057 () Atomic restore: dropping original table (wp_sbtt_feed_caches)
+0029.061 () Atomic restore: renaming new table (81_sbtt_feed_caches) to final table name (wp_sbtt_feed_caches)
+0029.086 () Search and replacing table: wp_sbtt_feed_caches: rows: 0
+0029.086 () Processing table (InnoDB): tsw_sbtt_feed_locator - will restore as: 81_sbtt_feed_locator
+0029.156 () Atomic restore: dropping original table (wp_sbtt_feed_locator)
+0029.167 () Database queries processed: 150 in 29.05 seconds
+0029.167 () Atomic restore: renaming new table (81_sbtt_feed_locator) to final table name (wp_sbtt_feed_locator)
+0029.185 () Search and replacing table: wp_sbtt_feed_locator: rows: 0
+0029.186 () Processing table (InnoDB): tsw_sbtt_feeds - will restore as: 81_sbtt_feeds
+0029.256 () Atomic restore: dropping original table (wp_sbtt_feeds)
+0029.267 () Atomic restore: renaming new table (81_sbtt_feeds) to final table name (wp_sbtt_feeds)
+0029.289 () Search and replacing table: wp_sbtt_feeds: rows: 0
+0029.290 () Processing table (InnoDB): tsw_sbtt_sources - will restore as: 81_sbtt_sources
+0029.347 () Atomic restore: dropping original table (wp_sbtt_sources)
+0029.351 () Atomic restore: renaming new table (81_sbtt_sources) to final table name (wp_sbtt_sources)
+0029.379 () Search and replacing table: wp_sbtt_sources: rows: 0
+0029.379 () Processing table (InnoDB): tsw_sbtt_tiktok_posts - will restore as: 81_sbtt_tiktok_posts
+0029.440 () Atomic restore: dropping original table (wp_sbtt_tiktok_posts)
+0029.453 () Atomic restore: renaming new table (81_sbtt_tiktok_posts) to final table name (wp_sbtt_tiktok_posts)
+0029.475 () Search and replacing table: wp_sbtt_tiktok_posts: rows: 0
+0029.476 () Processing table (InnoDB): tsw_sby_feed_caches - will restore as: 81_sby_feed_caches
+0029.543 () Atomic restore: dropping original table (wp_sby_feed_caches)
+0029.547 () Atomic restore: renaming new table (81_sby_feed_caches) to final table name (wp_sby_feed_caches)
+0029.572 () Search and replacing table: wp_sby_feed_caches: rows: 0
+0029.572 () Processing table (InnoDB): tsw_sby_feed_locator - will restore as: 81_sby_feed_locator
+0029.643 () Atomic restore: dropping original table (wp_sby_feed_locator)
+0029.648 () Atomic restore: renaming new table (81_sby_feed_locator) to final table name (wp_sby_feed_locator)
+0029.679 () Search and replacing table: wp_sby_feed_locator: rows: 0
+0029.679 () Processing table (InnoDB): tsw_sby_feeds - will restore as: 81_sby_feeds
+0029.810 () Atomic restore: dropping original table (wp_sby_feeds)
+0029.819 () Atomic restore: renaming new table (81_sby_feeds) to final table name (wp_sby_feeds)
+0029.836 () Search and replacing table: wp_sby_feeds: rows: 0
+0029.836 () Processing table (InnoDB): tsw_wpfm_backup - will restore as: 81_wpfm_backup
+0029.865 () Skipped execution of SQL statement (unwanted or internally handled type=18): /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+0029.877 () Unlocking database and leaving maintenance mode
+0029.878 () Disabling Maintenance mode&#8230;
+0029.878 () Atomic restore: dropping original table (wp_wpfm_backup)
+0029.883 () Atomic restore: renaming new table (81_wpfm_backup) to final table name (wp_wpfm_backup)
+0029.904 () Search and replacing table: wp_wpfm_backup: rows: 0
+0029.904 () Finished: lines processed: 166 in 29.78 seconds
+0029.905 () Cleaning up rubbish...
+0029.906 () Begin search and replace (updraftplus_restored_db)
+0029.906 () [Database-replace-site-url] Database: search and replace site URL
+0029.908 () Database search and replace: replace https://twp-www.cloudtest.shkp.com in backup dump with http://localhost/Tsue
+0029.908 () Database search and replace: replace http://www.twp-www.cloudtest.shkp.com in backup dump with http://localhost/Tsue
+0029.908 () Database search and replace: replace http://twp-www.cloudtest.shkp.com in backup dump with http://localhost/Tsue
+0029.909 () Database search and replace: replace https://www.twp-www.cloudtest.shkp.com in backup dump with http://localhost/Tsue
+0029.909 () Database search and replace: replace /src/public in backup dump with C:\laragon\www\Tsue
+0029.912 () Search and replacing table: wp_actionscheduler_actions: already done
+0029.912 () Search and replacing table: wp_actionscheduler_claims: already done
+0029.913 () Search and replacing table: wp_actionscheduler_groups: already done
+0029.913 () Search and replacing table: wp_actionscheduler_logs: already done
+0029.913 () Search and replacing table: wp_cff_facebook_feed_locator: already done
+0029.913 () Search and replacing table: wp_cff_feed_caches: already done
+0029.913 () Search and replacing table: wp_cff_feeds: already done
+0029.913 () Search and replacing table: wp_cff_sources: already done
+0029.914 () Search and replacing table: wp_commentmeta: already done
+0029.914 () Search and replacing table: wp_comments: already done
+0029.914 () Search and replacing table: wp_ctf_feed_caches: already done
+0029.914 () Search and replacing table: wp_ctf_feed_locator: already done
+0029.914 () Search and replacing table: wp_ctf_feeds: already done
+0029.914 () Search and replacing table: wp_ctf_feeds_posts: already done
+0029.914 () Search and replacing table: wp_ctf_posts: already done
+0029.915 () Search and replacing table: wp_imagify_files: already done
+0029.915 () Search and replacing table: wp_imagify_folders: already done
+0029.915 () Search and replacing table: wp_links: already done
+0029.915 () Search and replacing table: wp_options: already done
+0029.915 () Search and replacing table: wp_postexpirator_debug: already done
+0029.915 () Search and replacing table: wp_postmeta: already done
+0029.916 () Search and replacing table: wp_posts: already done
+0029.916 () Search and replacing table: wp_ppfuture_actions_args: already done
+0029.916 () Search and replacing table: wp_sbi_feed_caches: already done
+0029.916 () Search and replacing table: wp_sbi_feeds: already done
+0029.916 () Search and replacing table: wp_sbi_instagram_feed_locator: already done
+0029.916 () Search and replacing table: wp_sbi_instagram_feeds_posts: already done
+0029.916 () Search and replacing table: wp_sbi_instagram_posts: already done
+0029.917 () Search and replacing table: wp_sbi_sources: already done
+0029.917 () Search and replacing table: wp_sbr_feed_caches: already done
+0029.917 () Search and replacing table: wp_sbr_feed_locator: already done
+0029.917 () Search and replacing table: wp_sbr_feeds: already done
+0029.917 () Search and replacing table: wp_sbr_reviews_posts: already done
+0029.917 () Search and replacing table: wp_sbr_sources: already done
+0029.918 () Search and replacing table: wp_sbtt_feed_caches: already done
+0029.918 () Search and replacing table: wp_sbtt_feed_locator: already done
+0029.918 () Search and replacing table: wp_sbtt_feeds: already done
+0029.918 () Search and replacing table: wp_sbtt_sources: already done
+0029.918 () Search and replacing table: wp_sbtt_tiktok_posts: already done
+0029.918 () Search and replacing table: wp_sby_feed_caches: already done
+0029.918 () Search and replacing table: wp_sby_feed_locator: already done
+0029.919 () Search and replacing table: wp_sby_feeds: already done
+0029.919 () Search and replacing table: wp_term_relationships: already done
+0029.919 () Search and replacing table: wp_term_taxonomy: already done
+0029.919 () Search and replacing table: wp_termmeta: already done
+0029.919 () Search and replacing table: wp_terms: already done
+0029.919 () Search and replacing table: wp_usermeta: already done
+0029.919 () Search and replacing table: wp_users: already done
+0029.920 () Search and replacing table: wp_wpfm_backup: already done
+0029.920 () Search and replacing table: wp_wpr_rocket_cache: already done
+0029.920 () Search and replacing table: wp_wpr_rucss_used_css: already done
+0029.941 () Entity: themes
+0029.941 () restore_backup(backup_file=backup_2024-09-30-1741_Tsuen_wan_0a8a53bb9967-themes.zip, type=themes, info=a:3:{s:4:"path";s:37:"C:\laragon\www\Tsue/wp-content/themes";s:11:"description";s:6:"Themes";s:20:"singular_description";s:5:"Theme";}, last_one=)
+0029.943 () Unpacking backup... (backup_2024-09-30-1741_Tsuen_wan_0a8a53bb9967-themes.zip, 12.6 MB)
+0029.946 () Unzipping backup_2024-09-30-1741_Tsuen_wan_0a8a53bb9967-themes.zip to C:/laragon/www/Tsue/wp-content/upgrade/96864fea/ using UpdraftPlus_PclZip, starting index 0
+0030.719 () Unzip progress: 348 out of 348 files (15.9 MB, themes/tsuen-wan/sbi/item.php)
+0030.724 () Moving old data: filesystem method / updraft_dir is potentially possible
+0030.725 () Moving old data: can potentially use wp_filesystem method / -old
+0030.725 () Moving old data out of the way...
+0030.839 () Top-level entities being moved: index.php, twentytwentyfour, twentytwentythree, twentytwentytwo
+0030.852 () Moving unpacked backup into place...
+0031.155 () Top-level entities being moved: tsuen-wan
+0031.160 () Cleaning up rubbish...
+0031.199 () Entity: uploads
+0031.199 () restore_backup(backup_file=backup_2024-09-30-1741_Tsuen_wan_0a8a53bb9967-uploads.zip, type=uploads, info=a:2:{s:4:"path";s:38:"C:\laragon\www\Tsue/wp-content/uploads";s:11:"description";s:7:"Uploads";}, last_one=)
+0031.199 () Unpacking backup... (backup_2024-09-30-1741_Tsuen_wan_0a8a53bb9967-uploads.zip, 399.9 MB)
+0031.201 () Unzipping backup_2024-09-30-1741_Tsuen_wan_0a8a53bb9967-uploads.zip to C:/laragon/www/Tsue/wp-content/upgrade/080eff0e/ using UpdraftPlus_PclZip, starting index 0
+0036.051 () Unzip progress: 1002 out of 10949 files (48 MB, uploads/2024/04/Mask-group-6-1-150x150.jpg.webp)
+0040.497 () Unzip progress: 2003 out of 10949 files (87.8 MB, uploads/2024/05/Untitled-390-x-244-px-56-300x188.png)
+0044.859 () Unzip progress: 3004 out of 10949 files (130.2 MB, uploads/2024/05/Mask-group-320x270.png)
+0049.697 () Unzip progress: 4005 out of 10949 files (161.4 MB, uploads/2024/05/Untitled-1920-x-600-px-44-768x240.png.webp)
+0053.872 () Unzip progress: 5006 out of 10949 files (203.2 MB, uploads/2024/05/Mobile-page-banner-390x244px.jpg)
+0058.207 () Unzip progress: 6007 out of 10949 files (239.9 MB, uploads/2024/05/shop_168708082381395245-768x576.jpg)
+0063.895 () Unzip progress: 7008 out of 10949 files (269.7 MB, uploads/2024/05/Untitled-1920-x-600-px-41-1536x480.png)
+0068.913 () Unzip progress: 8009 out of 10949 files (303.5 MB, uploads/2024/05/TWP_320x320_logo-150x150.jpg)
+0074.395 () Unzip progress: 9010 out of 10949 files (337.1 MB, uploads/2024/05/shop_169157808697665482.jpg)
+0079.655 () Unzip progress: 10011 out of 10949 files (368.7 MB, uploads/2024/05/Product-hot-picks-4-photos_320px_320px-4-300x300.jpg.webp)
+0086.084 () Unzip progress: 10949 out of 10949 files (400.2 MB, uploads/2024/05/social-media-image-for-mall_1.jpg)
+0086.100 () Moving old data: filesystem method / updraft_dir is potentially possible
+0086.100 () Moving old data: can potentially use wp_filesystem method / -old
+0086.101 () Moving old data out of the way...
+0086.124 () Moving unpacked backup into place...
+0088.890 () Cleaning up rubbish...
+0089.032 () restore_backup(backup_file=backup_2024-09-30-1741_Tsuen_wan_0a8a53bb9967-uploads2.zip, type=uploads, info=a:2:{s:4:"path";s:38:"C:\laragon\www\Tsue/wp-content/uploads";s:11:"description";s:7:"Uploads";}, last_one=)
+0089.033 () Unpacking backup... (backup_2024-09-30-1741_Tsuen_wan_0a8a53bb9967-uploads2.zip, 252.3 MB)
+0089.035 () Unzipping backup_2024-09-30-1741_Tsuen_wan_0a8a53bb9967-uploads2.zip to C:/laragon/www/Tsue/wp-content/upgrade/a916d041/ using UpdraftPlus_PclZip, starting index 0
+0094.377 () Unzip progress: 1002 out of 6696 files (38 MB, uploads/2024/05/Simmons-320-x-320-Listing-Page-1024x887.jpg)
+0104.919 () Unzip progress: 2003 out of 6696 files (74.2 MB, uploads/2024/05/KYO_Product-hot-picks-1-48x48.jpg)
+0108.538 () Unzip progress: 3004 out of 6696 files (126.9 MB, uploads/2024/05/SS24-TWP-Website-Materials_web-page-banner-150x150.jpg)
+0114.131 () Unzip progress: 4005 out of 6696 files (156.5 MB, uploads/2024/05/sixty_eight_banner-2048x533.webp)
+0118.651 () Unzip progress: 5006 out of 6696 files (181.5 MB, uploads/2024/05/椒鹽海生蝦_NameL-768x488.jpg.webp)
+0124.996 () Unzip progress: 6007 out of 6696 files (222.7 MB, uploads/2024/09/認受商戶列表-864x1536.jpg)
+0128.546 () Unzip progress: 6696 out of 6696 files (252.6 MB, uploads/2024/08/homepage-banner-image-2-downsize-48x24.jpg.webp)
+0128.557 () Moving unpacked backup into place...
+0137.037 () Cleaning up rubbish...
+0137.046 () Entity: others
+0137.046 () restore_backup(backup_file=backup_2024-09-30-1741_Tsuen_wan_0a8a53bb9967-others.zip, type=others, info=a:2:{s:4:"path";s:30:"C:\laragon\www\Tsue/wp-content";s:11:"description";s:6:"Others";}, last_one=1)
+0137.047 () Unpacking backup... (backup_2024-09-30-1741_Tsuen_wan_0a8a53bb9967-others.zip, 0 MB)
+0137.048 () Unzipping backup_2024-09-30-1741_Tsuen_wan_0a8a53bb9967-others.zip to C:/laragon/www/Tsue/wp-content/upgrade/5a55614f/ using UpdraftPlus_PclZip, starting index 0
+0137.068 () Unzip progress: 9 out of 9 files (185.9 KB, wp-rocket-config/twp-www.cloudtest.shkp.com.php)
+0137.073 () advanced-cache.php: Skipping cache file (does not already exist)
+0137.079 () Cleaning up rubbish...
+0137.117 () Plugin path polylang-pro/polylang.php not found: de-activating.
+0137.117 () Plugin path advanced-custom-fields-pro/acf.php not found: de-activating.
+0137.117 () Plugin path better-search-replace/better-search-replace.php not found: de-activating.
+0137.118 () Plugin path contact-form-7/wp-contact-form-7.php not found: de-activating.
+0137.118 () Plugin path custom-facebook-feed/custom-facebook-feed.php not found: de-activating.
+0137.118 () Plugin path custom-twitter-feeds/custom-twitter-feed.php not found: de-activating.
+0137.118 () Plugin path feeds-for-tiktok/feeds-for-tiktok.php not found: de-activating.
+0137.118 () Plugin path feeds-for-youtube/youtube-feed.php not found: de-activating.
+0137.118 () Plugin path gdpr-cookie-compliance/moove-gdpr.php not found: de-activating.
+0137.118 () Plugin path imagify/imagify.php not found: de-activating.
+0137.119 () Plugin path instagram-feed/instagram-feed.php not found: de-activating.
+0137.119 () Plugin path menu-image/menu-image.php not found: de-activating.
+0137.119 () Plugin path post-expirator/post-expirator.php not found: de-activating.
+0137.119 () Plugin path post-types-order/post-types-order.php not found: de-activating.
+0137.119 () Plugin path reviews-feed/sb-reviews.php not found: de-activating.
+0137.119 () Plugin path simple-custom-post-order/simple-custom-post-order.php not found: de-activating.
+0137.119 () Plugin path taxonomy-terms-order/taxonomy-terms-order.php not found: de-activating.
+0137.119 () Plugin path wp-rocket/wp-rocket.php not found: de-activating.
+0137.140 () Restore successful!
+0137.140 () Restore successful

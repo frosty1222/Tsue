@@ -1,0 +1,259 @@
+body{
+    font-family: DM Sans;
+    font-size: 16px;
+    line-height: 1.46;
+    color: rgba(29, 29, 29, 1);
+}
+.small .arrow-button-all svg {
+    margin-top: -12px;
+}
+.small .arrow-prev-button.arrow-button-all-disable svg {
+    margin-top: -12px;
+}
+
+.container {
+    max-width: 1320px;
+    padding: 0 20px;
+    margin: auto;
+}
+
+h1 {
+    font-family: Nothing You Could Do;
+    font-size: 120px;
+    font-weight: 400;
+    line-height: 160px;
+    margin: 40px 0;
+}
+
+h2 {
+    font-family: Julius Sans One;
+    font-size: 120px;
+    line-height: 130px;
+    font-weight: 400;
+    color: rgba(255, 154, 62, 1);
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-family: Julius Sans One;
+    font-size: 56px;
+    line-height: 61px;
+    font-weight: 400;
+    color: rgba(29, 29, 29, 1);
+}
+
+h4 {
+    font-family: DM Sans;
+    font-size: 40px;
+    line-height: 52px;
+    font-weight: 500;
+    color: rgba(29, 29, 29, 1);
+}
+
+h5 {
+    font-family: DM Sans;
+    font-size: 24px;
+    line-height: 31px;
+    font-weight: 500;
+    color: rgba(29, 29, 29, 1);
+}
+
+
+h6 {
+    font-family: DM Sans;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgba(29, 29, 29, 1);
+}
+
+.button-read-more {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23.44px;
+    color: rgba(29, 29, 29, 1);
+    text-decoration: none;
+    padding: 4px 16px;
+    border: 1px solid rgba(0, 0, 0, 1);
+}
+
+/* .button-read-more:hover {
+    background-color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+} */
+
+a {
+    color: rgba(29, 29, 29, 1);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgba(115, 212, 212, 1);
+}
+
+
+.margin-bottom {
+    margin-bottom: 40px;
+}
+
+a.arrow-prev-button {
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.83px;
+    text-align: right;
+    
+}
+
+a.arrow-button-all {
+   display: block;
+   cursor: pointer;
+   padding: 10px 0 0;
+}
+
+a.arrow-button-all .text {
+    margin: 0;
+}
+
+a.arrow-button-all .text:hover {
+    font-weight: 700;
+    color: rgba(29, 29, 29, 1);
+}
+
+.arrow-button {
+    display: flex;
+    gap: 120px;
+    margin-bottom: 40px;
+}
+
+.arrow-button.small .arrow-button-all:hover{
+    font-weight: 700;
+
+}
+
+.arrow-button .arrow-button-all:hover {
+    
+    display: block;
+    font-weight: 700;
+    color: rgba(29, 29, 29, 1);
+    stroke-width: 3px;
+}
+
+
+.arrow-button.disable {
+    stroke: rgba(160, 160, 160, 1);
+}
+
+.arrow-button.disable a {
+    color: rgba(210, 210, 210, 1);
+}
+.arrow-button.big .arrow-button-all,
+.arrow-button.disable.big .arrow-prev-button.arrow-button-all-disable {
+    max-width: 185px;
+    width: 100%;
+}
+.arrow-button.small .arrow-button-all, .arrow-button.disable.small .arrow-prev-button.arrow-button-all-disable {
+    max-width: 81px;
+    width: 100%;
+    font-family: DM Sans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15.62px;
+}
+
+.button .button-read-more {
+    transition: all .3s cubic-bezier(.32,.94,.6,1);
+    color: rgba(29, 29, 29, 1);
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+.button-read-more span:after {
+    transition: all .3s cubic-bezier(.32,.94,.6,1);
+    z-index: -1;
+    content: "";
+    display: block;
+    width: 110%;
+    height: 110%;
+    background: #141414;
+    position: absolute;
+    left: 0;
+    top: 110%;
+}
+.button a:hover span:after {
+    transform: translateY(-105%);
+}
+.button .button-read-more span {
+    display: block;
+    
+}
+
+.button .button-read-more:hover{
+    color: #fff;
+}
+@media (max-width: 767.98px) {
+    h1 {
+
+        font-size: 72px;
+        font-weight: 400;
+        line-height: 96.05px;
+
+    }
+
+    h2 {
+        font-size: 56px;
+        font-weight: 400;
+        line-height: 61.1px;
+
+
+    }
+
+    h3 {
+
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 34.91px;
+
+    }
+
+    h4 {
+
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 31.25px;
+
+    }
+
+    h5 {
+
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 23.44px;
+
+    }
+
+    h6 {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 23.44px;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 23.36px;
+    }
+
+    .arrow-button {
+        display: block;
+    }
+
+    .arrow-button.disable.big,
+    .arrow-button.disable.small{
+        display: flex;
+    }
+    .button-read-more {
+        padding: 3.12px 16px;
+    }
+}

@@ -1,0 +1,37 @@
+0000.021 () Opened log file at time: Thu, 03 Oct 2024 07:36:59 +0000 on http://localhost/Tsue
+0000.022 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.6 WP: 6.6.2 PHP: 8.3.8 (apache2handler, Windows NT DESKTOP-PNE4FM5 10.0 build 22000 (Windows 11) AMD64) MySQL: 8.0.30 (max packet size=536870912) WPLANG: en_US Server: Apache/2.4.54 (Win64) OpenSSL/1.1.1q PHP/8.3.8 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 40.8M | 42M) multisite: N openssl: OpenSSL 3.0.13 30 Jan 2024 mcrypt: N LANG:  ZipArchive::addFile: N
+0000.022 () Free space on disk containing Updraft's temporary directory: 105216.3 MB
+0000.187 () Restore setup, now closing connection and starting restore over AJAX.
+0000.006 () Opened log file at time: Thu, 03 Oct 2024 07:37:01 +0000 on http://localhost/Tsue
+0000.006 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.6 WP: 6.6.2 PHP: 8.3.8 (apache2handler, Windows NT DESKTOP-PNE4FM5 10.0 build 22000 (Windows 11) AMD64) MySQL: 8.0.30 (max packet size=536870912) WPLANG: en_US Server: Apache/2.4.54 (Win64) OpenSSL/1.1.1q PHP/8.3.8 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 38M | 40M) multisite: N openssl: OpenSSL 3.0.13 30 Jan 2024 mcrypt: N LANG:  ZipArchive::addFile: N
+0000.007 () Free space on disk containing Updraft's temporary directory: 105216 MB
+0000.051 () Ensuring WP_Filesystem is setup for a restore
+0000.054 () WP_Filesystem is setup and ready for a restore
+0000.061 () Restore job started. Entities to restore: plugins. Restore options: {"updraft_encryptionphrase":"","updraft_restorer_wpcore_includewpconfig":false,"updraft_incremental_restore_point":-1}
+0000.067 () PHP event: code E_WARNING: mkdir(): File exists (line 558, C:\laragon\www\Tsue\wp-admin\includes\class-wp-filesystem-direct.php)
+0000.079 () Entity: plugins
+0000.080 () restore_backup(backup_file=backup_2024-09-30-1741_Tsuen_wan_0a8a53bb9967-plugins.zip, type=plugins, info=a:3:{s:4:"path";s:38:"C:\laragon\www\Tsue/wp-content/plugins";s:11:"description";s:7:"Plugins";s:20:"singular_description";s:6:"Plugin";}, last_one=1)
+0000.080 () Unpacking backup... (backup_2024-09-30-1741_Tsuen_wan_0a8a53bb9967-plugins.zip, 55.9 MB)
+0000.084 () Unzipping backup_2024-09-30-1741_Tsuen_wan_0a8a53bb9967-plugins.zip to C:/laragon/www/Tsue/wp-content/upgrade/e1e84343/ using UpdraftPlus_PclZip, starting index 0
+0002.911 () Unzip progress: 2082 out of 12680 files (32.6 KB, plugins/taxonomy-terms-order/screenshot-2.png)
+0008.546 () Unzip progress: 3083 out of 12680 files (12.5 MB, plugins/menu-image/freemius/templates/debug.php)
+0023.644 () Unzip progress: 3794 out of 12680 files (33.9 MB, plugins/advanced-custom-fields-pro/includes/locations/class-acf-location-post-status.php)
+0039.686 () Unzip progress: 4596 out of 12680 files (45.7 MB, plugins/post-expirator/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_TimezoneHelper.php)
+0054.577 () Unzip progress: 5597 out of 12680 files (50.3 MB, plugins/wordpress-seo/inc/interface-wpseo-wordpress-integration.php)
+0068.272 () Unzip progress: 6598 out of 12680 files (60.8 MB, plugins/polylang-pro/vendor/wpsyntex/polylang/include/cookie.php)
+0080.689 () Unzip progress: 7599 out of 12680 files (73.8 MB, plugins/wp-rocket/views/settings/page-sections/sucuri.php)
+0093.635 () Unzip progress: 8600 out of 12680 files (90.6 MB, plugins/custom-twitter-feeds/languages/custom-twitter-feeds-nl_NL.mo)
+0105.249 () Unzip progress: 9601 out of 12680 files (98.7 MB, plugins/better-wp-security/core/modules/ban-users/settings.php)
+0112.715 () Unzip progress: 10602 out of 12680 files (101.9 MB, plugins/better-wp-security/dist/core/ban-hosts.css)
+0121.383 () Unzip progress: 11603 out of 12680 files (117.4 MB, plugins/updraftplus/vendor/phpseclib/phpseclib/phpseclib/Crypt/RC2.php)
+0133.955 () Unzip progress: 12604 out of 12680 files (147.4 MB, plugins/reviews-feed/languages/reviews-feed-es_ES.mo)
+0134.570 () Unzip progress: 12680 out of 12680 files (147.9 MB, plugins/reviews-feed/class/test.php)
+0134.576 () Moving old data: filesystem method / updraft_dir is potentially possible
+0134.577 () Moving old data: can potentially use wp_filesystem method / -old
+0134.577 () Moving old data out of the way...
+0135.080 () Top-level entities being moved: akismet, hello.php, index.php, updraftplus
+0135.095 () Moving unpacked backup into place...
+0139.702 () Top-level entities being moved: advanced-custom-fields-pro, akismet, better-search-replace, better-wp-security, contact-form-7, contact-form-cfdb7, custom-facebook-feed, custom-twitter-feeds, feeds-for-tiktok, feeds-for-youtube, gdpr-cookie-compliance, imagify, instagram-feed, menu-image, polylang-pro, polylang-wc, post-expirator, post-types-order, reviews-feed, simple-custom-post-order, taxonomy-terms-order, updraftplus, wordpress-seo, wp-rocket
+0139.812 () Cleaning up rubbish...
+0139.992 () Restore successful!
+0139.992 () Restore successful

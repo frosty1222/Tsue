@@ -1,0 +1,363 @@
+#menu{
+    display: none;
+}
+
+.page-template-about-us .banner-section{
+    z-index: 1;
+}
+
+.credit{
+    margin: 0;
+}
+
+body{
+    border: none;
+}
+
+.about-us{
+    position: relative;
+    overflow: hidden;
+}
+
+.about-us .container{
+    min-height: 700px;
+}
+
+.about-us .subtitle{
+    font-family: DM Sans;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 52px;
+    color: #1D1D1D;
+    margin-top: 101px;
+    margin-bottom: 8px;
+    letter-spacing: 0;
+}
+
+.about-us .title{
+    font-family: Julius Sans One;
+    font-weight: 400;
+    font-size: 120px;
+    line-height: 131px;
+    text-transform: uppercase;
+    color: #FF9A3E;
+    letter-spacing: 0;
+    margin-left: -7px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-us .content p{
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.36px;
+    text-align: left;
+    letter-spacing: 0;
+    margin-top: 0;
+    margin-bottom: 17px;
+}
+
+.about-us .list-item-title{
+    font-family: 'DM Sans';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: #1D1D1D;
+    margin-bottom: 24px;
+}
+
+.about-us .content-container, .about-us .top-container{
+    margin-right: 364px;
+}
+
+.about-us .content{
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+.draw-line{
+    opacity: 0;
+}
+
+.draw-line.left svg{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.draw-line.active{
+    opacity: 1;
+}
+
+.draw-line.active path {
+    fill: none;
+    animation: move 1.5s;  
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+
+.draw-line.left svg:last-child{
+    top: 423px;
+}
+
+.draw-line.left svg:last-child path{
+    animation-delay: 1s;
+}
+
+
+@keyframes move {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.draw-line.bottom{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: -39px;
+    margin-left: -65px;
+}
+
+.draw-line.bottom svg:first-child{
+    margin-right: -85px;
+}
+
+.draw-line.bottom svg:first-child path{
+    animation-delay: 1s;
+}
+
+
+.about-us .content-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    margin-left: 77px;
+    margin-top: 61px;
+    justify-content: space-between;
+}
+
+.about-us .list-item{
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 2 - 111px);
+}
+
+.about-us .list-item .link{
+    display: flex;
+    align-items: center;
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 146%;
+    margin-bottom: 20px;
+    color: #1D1D1D;
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.about-us .list-item .link:hover{
+    color: #73D4D4;
+}
+
+.letter-fade .word{
+    margin-right: 8px;
+}
+
+.letter-fade .word.last{
+    margin-right: 0;
+}
+
+.letter-fade .word span {
+    opacity: 0;
+    display: inline-block;
+  }
+  
+.letter-fade .word span {
+    transition: 0.5s all;
+    transition-delay: var(--delay);
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+.letter-fade.active .word span {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.letter-fade .break-row{
+    width: 100%;
+}
+
+
+.draw-line.left.mobile{
+    display: none;
+}
+
+
+@media(max-width: 1199.98px){
+    .about-us .title{
+        font-size: 100px;
+    }
+
+    .draw-line.left svg{
+        width: 200px;
+        height: auto;
+    }
+
+    .draw-line.left svg:last-child{
+        width: 70px;
+    }
+
+    .draw-line.left svg:last-child{
+        top: 260px;
+    }
+
+    .draw-line.left.active path{
+        stroke-width: 1.8px;
+    }
+
+    .about-us .list-item{
+        width: calc(100% / 2 - 65px);
+    }
+
+    .about-us .content-container, .about-us .top-container{
+        margin-right: 184px;
+    }
+    .about-us .content-container{
+        margin-left: 30px;
+    }
+
+    .about-us .subtitle{
+        font-size: 24px;
+        line-height: 31px;
+    }
+}
+
+@media(max-width: 991.98px){
+    .about-us .title{
+        font-size: 80px;
+    }
+}
+
+@media(max-width: 767.98px){
+    .draw-line.left{
+        display: none;
+    }
+
+    .about-us .content-container, .about-us .top-container{
+        margin: 0;
+    }
+
+    .about-us .list-item{
+        width: 100%;
+    }
+
+    .about-us .list-item:last-child{
+        margin-top: 23px;
+    }
+
+    .draw-line.left.mobile{
+        display: block;
+    }
+
+    .draw-line.left.active path{
+        stroke-width: unset;
+    }
+
+    .draw-line.bottom svg{
+        height: auto;
+    }
+
+    .draw-line.left.mobile svg{
+        width: auto;
+    }
+
+    .draw-line.left.mobile svg path{
+        stroke-width: 0.7px;
+    }
+
+    .draw-line.left.mobile svg:first-child{
+        width: 200px;
+    }
+
+    .draw-line.left.mobile svg:last-child{
+        width: 70px;
+        top: 70px;
+    }
+    
+    .draw-line.bottom{
+        margin-left: 0;
+    }
+
+}
+
+@media(max-width: 575.98px){
+    .draw-line.bottom svg:first-child path{
+        animation-delay: 0.7s;
+    }
+    .draw-line.left.mobile svg:first-child{
+        width: auto;
+    }
+
+    .draw-line.left.mobile svg:last-child{
+        width: auto;
+        top: 41px;
+    }
+
+    .about-us .subtitle{
+        margin-top: 90px;
+        margin-bottom: 22px;
+    }
+
+    .about-us .title{
+        font-size: 56px;
+        line-height: 61.1px;
+        margin-left: 0;
+        margin-bottom: 22px;
+    }
+
+    .draw-line.bottom{
+        margin: 0;
+        margin-top: 0;
+        height: 106px;
+    }
+
+    .draw-line.bottom svg:last-child path{
+        animation-delay: 0s;
+    }
+
+    .draw-line.bottom svg{
+        position: absolute;
+        margin: 0;
+    }
+
+    .draw-line.bottom svg:last-child{
+        right: 0;
+        transform: translateX(47%);
+    }
+
+    .draw-line.bottom{
+        margin-bottom: -36px;
+    }
+
+    .draw-line.bottom svg:first-child{
+        right: 176px;
+        margin: 0;
+        width: 207px;
+        bottom: -8px;
+    }
+
+    .about-us .content{
+        margin-bottom: 29px;
+    }
+    
+}
+
+@media(max-width: 360.98px){
+    .about-us .title{
+        font-size: 50px;
+    }
+}

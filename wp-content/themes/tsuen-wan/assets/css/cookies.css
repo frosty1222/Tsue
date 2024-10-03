@@ -1,0 +1,115 @@
+#moove_gdpr_cookie_info_bar.moove-gdpr-align-center .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content .moove-gdpr-cookie-notice p {
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #000000;
+    
+}
+#moove_gdpr_cookie_info_bar.moove-gdpr-align-center .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content .moove-gdpr-cookie-notice a{
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    
+    color: #000000;
+}
+
+#moove_gdpr_cookie_info_bar.moove-gdpr-align-center .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content .moove-gdpr-button-holder button.mgbutton {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23.44px;
+    color: rgba(29, 29, 29, 1);
+    text-decoration: none;
+    padding: 4px 16px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    background-color: #fff;
+    border-radius: 0;
+    margin: 0;
+    font-family: 'DM Sans';
+
+}
+#moove_gdpr_cookie_info_bar.moove-gdpr-align-center .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content .moove-gdpr-cookie-notice a:hover {
+    color: #73D4D4;
+}
+
+#moove_gdpr_cookie_info_bar.moove-gdpr-align-center .moove-gdpr-info-bar-container .moove-gdpr-cookie-notice {
+    width: 72%;
+    margin-left: 29px;
+}
+#moove_gdpr_cookie_info_bar.moove-gdpr-light-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content .moove-gdpr-button-holder {
+    padding-left: 0;
+  
+    text-align: end;
+    margin-right: 20px;
+    margin-top: 4px;
+}
+
+#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content .moove-gdpr-button-holder {
+    transition: all .3s cubic-bezier(.32,.94,.6,1);
+    color: rgba(29, 29, 29, 1);
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content .moove-gdpr-button-holder button.mgbutton::after{
+    transition: all .3s cubic-bezier(.32,.94,.6,1);
+    z-index: -1;
+    content: "";
+    display: block;
+    width: 110%;
+    height: 110%;
+    background: #141414;
+    position: absolute;
+    left: 0;
+    top: 110%;
+}
+
+#moove_gdpr_cookie_info_bar.moove-gdpr-light-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content .moove-gdpr-button-holder:hover button.mgbutton::after{
+    transform: translateY(-105%);
+} 
+
+#moove_gdpr_cookie_info_bar.moove-gdpr-light-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content .moove-gdpr-button-holder {
+    padding-left: 0;
+}
+#moove_gdpr_cookie_info_bar.moove-gdpr-light-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton:hover {
+    background: none;
+    color: #fff;
+}
+ #moove_gdpr_cookie_info_bar.moove-gdpr-align-center.moove-gdpr-light-scheme.gdpr_infobar_postion_bottom {
+    border: none;
+    background-color: #F6F6F6;
+}
+
+#moove_gdpr_cookie_info_bar.moove-gdpr-align-center.moove-gdpr-light-scheme .moove-gdpr-info-bar-container {
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+#moove_gdpr_cookie_info_bar.moove-gdpr-align-center.moove-gdpr-light-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content {
+    justify-content: space-between;
+}
+
+@media (max-width: 767.98px) {
+    #moove_gdpr_cookie_info_bar.moove-gdpr-align-center.moove-gdpr-light-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content .moove-gdpr-cookie-notice {
+        width: 100%;
+        padding-left: 0px;
+        margin-bottom: 16px;
+        margin-left: 0;
+    }
+
+    #moove_gdpr_cookie_info_bar.moove-gdpr-light-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content .moove-gdpr-button-holder {
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 441.98px) {
+    #moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content .moove-gdpr-button-holder button.mgbutton {
+        width: 100%;
+    }
+    #moove_gdpr_cookie_info_bar.moove-gdpr-align-center.moove-gdpr-light-scheme .moove-gdpr-info-bar-container{
+        padding: 20px;
+    }
+}

@@ -1,0 +1,20 @@
+0000.062 (R) [notice] Looking for plugins archive: file name: backup_2024-09-30-1741_Tsuen_wan_0a8a53bb9967-plugins.zip
+0000.063 (R) [notice] Archive is expected to be size: 57251.1 KB: OK
+0000.080 (R) [notice] Unpacking backup... (backup_2024-09-30-1741_Tsuen_wan_0a8a53bb9967-plugins.zip, 55.9 MB)
+0002.911 (R) [notice] Unzip progress: 2082 out of 12680 files (32.6 KB, plugins/taxonomy-terms-order/screenshot-2.png)
+0008.546 (R) [notice] Unzip progress: 3083 out of 12680 files (12.5 MB, plugins/menu-image/freemius/templates/debug.php)
+0023.641 (R) [notice] Unzip progress: 3794 out of 12680 files (33.9 MB, plugins/advanced-custom-fields-pro/includes/locations/class-acf-location-post-status.php)
+0039.686 (R) [notice] Unzip progress: 4596 out of 12680 files (45.7 MB, plugins/post-expirator/lib/vendor/woocommerce/action-scheduler/classes/abstracts/ActionScheduler_TimezoneHelper.php)
+0054.577 (R) [notice] Unzip progress: 5597 out of 12680 files (50.3 MB, plugins/wordpress-seo/inc/interface-wpseo-wordpress-integration.php)
+0068.271 (R) [notice] Unzip progress: 6598 out of 12680 files (60.8 MB, plugins/polylang-pro/vendor/wpsyntex/polylang/include/cookie.php)
+0080.689 (R) [notice] Unzip progress: 7599 out of 12680 files (73.8 MB, plugins/wp-rocket/views/settings/page-sections/sucuri.php)
+0093.635 (R) [notice] Unzip progress: 8600 out of 12680 files (90.6 MB, plugins/custom-twitter-feeds/languages/custom-twitter-feeds-nl_NL.mo)
+0105.248 (R) [notice] Unzip progress: 9601 out of 12680 files (98.7 MB, plugins/better-wp-security/core/modules/ban-users/settings.php)
+0112.715 (R) [notice] Unzip progress: 10602 out of 12680 files (101.9 MB, plugins/better-wp-security/dist/core/ban-hosts.css)
+0121.383 (R) [notice] Unzip progress: 11603 out of 12680 files (117.4 MB, plugins/updraftplus/vendor/phpseclib/phpseclib/phpseclib/Crypt/RC2.php)
+0133.955 (R) [notice] Unzip progress: 12604 out of 12680 files (147.4 MB, plugins/reviews-feed/languages/reviews-feed-es_ES.mo)
+0134.569 (R) [notice] Unzip progress: 12680 out of 12680 files (147.9 MB, plugins/reviews-feed/class/test.php)
+0134.577 (R) [notice] Moving old data out of the way...
+0135.095 (R) [notice] Moving unpacked backup into place...
+0139.812 (R) [notice] Cleaning up rubbish...
+0139.992 (R) [notice] Restore successful!

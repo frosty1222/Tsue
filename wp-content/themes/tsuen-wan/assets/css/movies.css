@@ -1,0 +1,266 @@
+.movies_list{
+    display: flex;
+    flex-flow: row wrap;
+    padding-bottom: 30px;
+}
+.movies_list .item{
+    padding: 20.23px 14px 60px;
+    border-color: transparent;
+    border-style: solid;
+    position: relative;
+}
+.movies_list .movies_name{
+    font-family: "DM Sans",sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23.44px;
+    text-align: center;
+    padding-top: 15px;
+}
+.movies_time{
+    list-style: none;
+    padding: 0;
+    max-width: 230px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 9px 5px;
+    row-gap: 6px;
+}
+.movies_time.one_item,
+.movies_time.two_item{
+    justify-content: center;
+    text-align: center;
+}
+.movies_time li{
+    flex-basis: 33.333%;
+    max-width: 33.333%;
+}
+.movies_time li:nth-child(3n+2){
+    text-align: center;
+}
+.movies_time li:nth-child(3n){
+    text-align: right;
+}
+.action_list.button .button-read-more{
+    min-width: 121px;
+    padding: 3px 10px;
+    text-align: center;
+}
+
+.movies_list .item.item-hide{
+    display: none;
+}
+h2.theatre_name{
+    font-family: DM Sans;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31.25px;
+    text-align: center;
+    color: #1D1D1D;
+}
+.movies_wr{
+    padding-top: 78px;
+}
+.movies_wr .time-share{
+    gap: 40px;
+    margin-bottom: 40px;
+}
+.movies_wr .time-share > div{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.movies_wr .time-share .a2a_dd{
+    display: flex;
+    gap: 24px;
+}
+#movies_more{
+    font-family: DM Sans;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23.44px;
+    text-align: center;
+    background: none;
+    box-shadow: none;
+    position: relative;
+    padding:4px 16px 4px 16px;
+    border-width: 0px 0px 1px 0px;
+    border-color: #000000;
+    margin: 0 auto;
+    cursor: pointer;
+    color: #1d1d1d;
+}
+#movies_more:hover{
+    color: var(--primary-color);
+}
+.movies_wr .load_more{
+    text-align: center;
+    padding-bottom: 60px;
+}
+.movies_list .inner-feature .ratio{
+    position: relative;
+    padding-bottom: 150%;
+}
+.movies_list .inner-feature img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+@media only screen and (min-width: 1200px) {
+    .movies_list .item{
+        flex-basis: 25%;
+        max-width: 25%;
+        border-bottom-color: #E5E5E5;
+        border-left-color: #E5E5E5;
+        border-right-color: #E5E5E5;
+    }
+    .movies_list .item:nth-child(1),
+    .movies_list .item:nth-child(2),
+    .movies_list .item:nth-child(3),
+    .movies_list .item:nth-child(4){
+        border-top-color: #E5E5E5;
+    }
+    .movies_list .item:nth-child(2n),
+    .movies_list .item:nth-child(3n),
+    .movies_list .item:nth-child(2n+1){
+        border-left-color: transparent;
+    }
+    .movies_list .item:nth-child(4n+1){
+        border-left-color: #E5E5E5;
+    }
+}
+@media only screen and (min-width: 992px)  and (max-width: 1199.98px){
+    .movies_list .item{
+        flex-basis: 33.333%;
+        max-width: 33.333%;
+        border-bottom-color: #E5E5E5;
+        border-left-color: #E5E5E5;
+        border-right-color: #E5E5E5;
+    }
+    .movies_list .item:nth-child(1),
+    .movies_list .item:nth-child(2),
+    .movies_list .item:nth-child(3){
+        border-top-color: #E5E5E5;
+    }
+    .movies_list .item:nth-child(2n),
+    .movies_list .item:nth-child(3n),
+    .movies_list .item:nth-child(3n+2){
+        border-left-color: transparent;
+    }
+}
+@media only screen and (min-width: 600px)  and (max-width: 991.98px){
+    .movies_list .item{
+        flex-basis: 50%;
+        max-width: 50%;
+        border-bottom-color: #E5E5E5;
+        border-left-color: #E5E5E5;
+        border-right-color: #E5E5E5;
+    }
+    .movies_list .item:nth-child(1),
+    .movies_list .item:nth-child(2){
+        border-top-color: #E5E5E5;
+    }
+    .movies_list .item:nth-child(2n){
+        border-left-color: transparent;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .action_list{
+        position: absolute;
+        bottom: 20px;
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        max-width: 100%;
+        width: 262px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width: 599.98px) {
+    .movies_list .item{
+        flex-basis: 100%;
+        max-width: 100%;
+        padding: 0;
+        border-bottom-color: #E5E5E5;
+        border-width: 0 0 1px 0;
+        display: flex;
+        gap: 16px;
+        padding: 20px 0;
+    }
+    .movies_list .item .inner-feature{
+        width: 49%;
+    }
+    .movies_list .item .mv-info{
+        width: calc(51% - 16px);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 22px;
+    }
+    .movies_list .item:nth-child(1){
+        border-top-color: transparent;
+    }
+    .movies_wr .time-share{
+        flex-flow: row wrap;
+        row-gap: 16px;
+        column-gap: 0;
+        max-width: 302px;
+        margin: 0 auto;
+        padding-top: 12px;
+    }
+    .movies_wr .time-share > div{
+        flex-basis: 50%;
+        max-width: 50%;
+        gap: 16px;
+    }
+    h2.theatre_name{
+        font-size: 18px;
+        line-height: 23.44px;
+    }
+    .movies_wr {
+        padding-top: 50px;
+    }
+    .movies_list{
+        padding-top: 25px;
+        padding-bottom: 32px;
+    }
+    .movies_list .movies_name{
+        text-align: left;
+        font-size: 16px;
+        line-height: 21px;
+        padding-top: 25px;
+    }
+    .movies_time{
+        padding-top: 20px;
+    }
+    .movies_time li{
+        flex-basis: 50%;
+        max-width: 50%;
+        font-size: 14px;
+    }
+    .movies_time li:nth-child(3n),
+    .movies_time li:nth-child(3n+2){
+        text-align: left;
+    }
+    /*.action_list{
+        position: absolute;
+        bottom: 22px;
+        max-width: 100%;
+        left: 0;
+        right: 0;
+    }*/
+    .action_list.button .button-read-more{
+        margin-top: 6px;
+    }
+    .movies_time.one_item, .movies_time.two_item{
+        justify-content: left;
+        text-align: left;
+    }
+}
+
