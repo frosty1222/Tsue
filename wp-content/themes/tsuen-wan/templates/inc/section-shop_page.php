@@ -76,8 +76,11 @@ $lang = pll_current_language();
                                 <div class="shop_name_inner">
                                     {{shop.shop_name}}
                                 </div>
+                                <ul class="listmenu list-icon">
+                                    <li ng-repeat="icon in shop.privilege_icons" ng-bind-html="buildSvg(icon)"></li>
+                                </ul>
                             </div>
-                            <div class="flex_item shop_location list_show">
+                            <!-- <div class="flex_item shop_location list_show">
                                 <img class="location_icon shop_icon"
                                      src="<?php echo template_img_url( "list_location.svg" ) ?>" alt="location">
                                 <span>
@@ -107,7 +110,7 @@ $lang = pll_current_language();
                                     <span ng-repeat="other in shop.shop_others"
                                           class="splide__slide__other active shop_other_icon {{ other }}"></span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>

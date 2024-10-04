@@ -753,7 +753,7 @@ function mobileAndTabletcheck(){
 };
 // app defined
 App = angular.module('app', []);
-App.controller('ShopController', ['$scope', '$http', function($scope, $http) {
+App.controller('ShopController', ['$scope','$sce', '$http', function($scope,$sce,$http) {
     var default_phase = "phase_1";
 
     $scope.init = function($content_type){
@@ -881,7 +881,9 @@ App.controller('ShopController', ['$scope', '$http', function($scope, $http) {
         phase_floor_array = phase_floor.split(",")
         $scope.get_shops_by_floor(phase_floor_array[0], phase_floor_array[1]);
     }
-
+    $scope.buildSvg = function(svg){
+        return $sce.trustAsHtml(svg);
+    }
     $scope.get_shops_by_phase = function(phase){
         $scope.shop_phase = phase;
         if(phase == "all"){

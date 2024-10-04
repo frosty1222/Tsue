@@ -146,92 +146,125 @@ function get_search()
 	wp_die();
 
 }
-function get_shops(){
-	if($_POST["type"] == "dinings"){
-		$post_type = "dinings";
-		$post_tax = "dining-categories";
-	}elseif($_POST["type"] == "shops"){
-		$post_type = "shops";
-		$post_tax = "shop-categories";
-	}else{
-		$return["status"] = 2;
-		echo json_encode($return, true);
-		wp_die();
-	}
-	$args = array(
-		'posts_per_page' => -1,
-		'post_type' => $post_type,
-	);
-	$shoppings = get_posts($args);
-	$return = array();
-	if (!empty($shoppings)) {
-		$shops = array();
-		foreach ($shoppings as $shopping) {
-			$temp = array();
-			$shop_fields = get_fields($shopping);
-			$temp["primary_slug"] = "";
-			$temp["url"] = get_permalink($shopping);
-			$temp["thumbnail"] = $shop_fields["thumbnail"];
-			$temp["shop_name"] = $shop_fields["shop_name"];
-			if(empty($temp["shop_name"])){
-				$temp["shop_name"] = $shopping->post_title;
-			}
-			$temp["opening_hours"] = $shop_fields["opening_hours"];
-			$temp["list_description"] = $shop_fields["list_description"];
+function get_shops() {
+    // Determine the post type and taxonomy based on the POST type
+    if ($_POST["type"] == "dinings") {
+        $post_type = "dinings";
+        $post_tax = "dining-categories";
+    } elseif ($_POST["type"] == "shops") {
+        $post_type = "shops";
+        $post_tax = "shop-categories";
+    } else {
+        $return["status"] = 2;
+        echo json_encode($return, true);
+        wp_die();
+    }
 
-			$temp["shop_floor_level"] = $shop_fields["shop_phase_level"];
-			$shop_floor_level = explode("_", $temp["shop_floor_level"]);
-			$temp["shop_floor"] = $shop_floor_level["1"];
-			$temp["shop_number"] = get_shop_floor($shop_fields["shop_numbers"]);
-			$temp["shop_sort"] = $temp["shop_floor"]."_".$temp["shop_number"];
-			$temp["shop_phase"] = "phase_".$shop_floor_level["0"];
-			$temp["shop_others"] = array();
-			if(!empty($shop_fields["others"])){
-				foreach($shop_fields["others"] as $other){
-					if($other["value"] == "other_2" || $other["value"] == "other_3") continue;
-					$temp["shop_others"][] = $other["value"];
-				}
-			}
-			if(empty($temp["list_description"])){
-				$temp["list_description"] = pll__("Shop")." {$temp["shop_number"]} {$temp["shop_floor"]} - {$temp["shop_phase"]}";
-			}
-			if($temp["shop_floor"] == "MTR"){
-				$temp["shop_sort"] = "0".$temp["shop_sort"];
-			}
-			$temp["phone"] = $shop_fields["phone"];
-			$temp["icon"] = $shop_fields["icon"];
-			$temp["sort_name"] = $shopping->post_title;
-			$temp["sort_name"] = strtolower($temp["sort_name"]);
-			$temp["sort_order"] = $temp["sort_name"];
-			$temp["sort_name"] = substr($temp["sort_name"], 0, 1);
+    // Set up query arguments to get the posts
+    $args = array(
+        'posts_per_page' => -1,
+        'post_type' => $post_type,
+    );
+    $shoppings = get_posts($args);
+    $return = array();
 
-			if(preg_match("/^[a-zA-Z0-9]+$/", $temp["sort_name"]) != 1) {
-				$temp["sort_name"] = "zz";
-				$temp["sort_order"] = "zz";
-			}
-			$terms = wp_get_post_terms($shopping->ID, $post_tax);
-			$cats = array();
-			if (!empty($terms)) {
-				$primary_term = yoast_get_primary_term_id($post_tax, $shopping->ID);
-				foreach ($terms as $key => $term) {
-					if (empty($primary_term) && $key == 0) $primary_term = $term->term_id;
-					if ($term->term_id == $primary_term) {
-						$temp["primary_slug"] = $term->slug;
-					}
-					array_push($cats, $term->slug);
-				}
-			}
-			$temp["cats"] = $cats;
-			array_push($shops, $temp);
-		}
-		$return["shops"] = $shops;
-		$return["status"] = 1;
-	}else{
-		$return["status"] = 2;
-	}
-	echo json_encode($return, true);
-	wp_die();
+    // Check if we have any shops
+    if (!empty($shoppings)) {
+        $shops = array();
+        foreach ($shoppings as $shopping) {
+            $temp = array();
+            $shop_fields = get_fields($shopping);
+            $temp["primary_slug"] = "";
+            $temp["url"] = get_permalink($shopping);
+            $temp["thumbnail"] = get_the_post_thumbnail_url($shopping->ID, 'full');
+            $temp["shop_name"] = $shop_fields["shop_name"] ?: $shopping->post_title; // Fallback to post title
+
+            // Get the privileges associated with the shop
+            $privileges = get_the_terms($shopping->ID, 'privileges');
+            $temp['privilege'] = !empty($privileges) ? $privileges : [];
+
+            // Initialize an array to store icons for privileges
+            $temp['privilege_icons'] = []; // Array to hold all icons
+            if (!empty($temp['privilege'])) {
+                foreach ($temp['privilege'] as $privilege) {
+                    // Get the icon associated with the privilege
+                    $image_id = get_field('icon_tax', $privilege);
+                    if ($image_id) {
+                        // Get the image URL
+                        $image_url = wp_get_attachment_image_url($image_id, 'full');
+                        $ext = pathinfo($image_url, PATHINFO_EXTENSION);
+                        // Initialize icon content
+                        $icon_content = '';
+                        // Check if the file is an SVG
+                        if ($ext === 'svg') {
+                            $icon_content = file_get_contents($image_url);
+                        } else {
+                            $icon_content = wp_get_attachment_image($image_id, 'full');
+                        }
+                        // Add the icon content to the privilege icons array
+                        $temp['privilege_icons'][] = $icon_content; // Use [] to push to the array
+                    }
+                }
+            }
+
+            // Other fields
+            $temp["opening_hours"] = $shop_fields["opening_hours"];
+            $temp["list_description"] = $shop_fields["list_description"] ?: pll__("Shop") . " {$temp["shop_number"]} {$temp["shop_floor"]} - {$temp["shop_phase"]}";
+
+            $temp["shop_floor_level"] = $shop_fields["shop_phase_level"];
+            $shop_floor_level = explode("_", $temp["shop_floor_level"]);
+            $temp["shop_floor"] = $shop_floor_level[1];
+            $temp["shop_number"] = get_shop_floor($shop_fields["shop_numbers"]);
+            $temp["shop_sort"] = $temp["shop_floor"] . "_" . $temp["shop_number"];
+            $temp["shop_phase"] = "phase_" . $shop_floor_level[0];
+
+            // Process other fields
+            $temp["shop_others"] = [];
+            if (!empty($shop_fields["others"])) {
+                foreach ($shop_fields["others"] as $other) {
+                    if ($other["value"] == "other_2" || $other["value"] == "other_3") continue;
+                    $temp["shop_others"][] = $other["value"];
+                }
+            }
+
+            // Set the phone and sorting
+            $temp["phone"] = $shop_fields["phone"];
+            $temp["sort_name"] = strtolower($shopping->post_title);
+            $temp["sort_order"] = $temp["sort_name"];
+            $temp["sort_name"] = substr($temp["sort_name"], 0, 1);
+
+            // Handle sorting edge cases
+            if (preg_match("/^[a-zA-Z0-9]+$/", $temp["sort_name"]) != 1) {
+                $temp["sort_name"] = "zz";
+                $temp["sort_order"] = "zz";
+            }
+
+            // Get the categories for the shop
+            $terms = wp_get_post_terms($shopping->ID, $post_tax);
+            $cats = array();
+            if (!empty($terms)) {
+                $primary_term = yoast_get_primary_term_id($post_tax, $shopping->ID);
+                foreach ($terms as $key => $term) {
+                    if (empty($primary_term) && $key == 0) $primary_term = $term->term_id;
+                    if ($term->term_id == $primary_term) {
+                        $temp["primary_slug"] = $term->slug;
+                    }
+                    array_push($cats, $term->slug);
+                }
+            }
+            $temp["cats"] = $cats;
+            array_push($shops, $temp);
+        }
+        $return["shops"] = $shops;
+        $return["status"] = 1;
+    } else {
+        $return["status"] = 2;
+    }
+    echo json_encode($return, true);
+    wp_die();
 }
+
+
 
 add_action( 'wp_ajax_get_search', 'get_search' );
 add_action( 'wp_ajax_nopriv_get_search', 'get_search' );
