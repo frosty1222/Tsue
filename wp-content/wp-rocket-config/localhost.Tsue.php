@@ -1,15 +1,15 @@
 <?php
 defined( 'ABSPATH' ) || exit;
 
-$rocket_cookie_hash = '9c0d90c9c3af20d2c6ed023eb7b6e0e1';
-$rocket_logged_in_cookie = 'wordpress_logged_in_9c0d90c9c3af20d2c6ed023eb7b6e0e1';
+$rocket_cookie_hash = 'b8b7e83974017cdcb02b75674eb4edfe';
+$rocket_logged_in_cookie = 'wordpress_logged_in_b8b7e83974017cdcb02b75674eb4edfe';
 $rocket_cache_mobile_files_tablet = 'desktop';
-$rocket_secret_cache_key = '66fea959ca752853696498';
+$rocket_secret_cache_key = '66ffca825fea6152989406';
 $rocket_cache_mobile = 1;
 $rocket_do_caching_mobile_files = 0;
 $rocket_cache_webp = 0;
 $rocket_cache_ssl = 1;
-$rocket_cache_reject_uri = '/Tsue(/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$))';
+$rocket_cache_reject_uri = '/tsue(/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$))';
 $rocket_cache_reject_cookies = 'wordpress_logged_in_.+|wp-postpass_|wptouch_switch_toggle|comment_author_|comment_author_email_';
 $rocket_cache_reject_ua = 'facebookexternalhit|WhatsApp';
 $rocket_cache_query_strings = array();
@@ -88,4 +88,4 @@ $rocket_cache_ignored_parameters = array(
 );
 $rocket_cache_mandatory_cookies = '';
 $rocket_cache_dynamic_cookies = array();
-$rocket_permalink_structure = '/index.php/%year%/%monthnum%/%day%/%postname%/';
+$rocket_permalink_structure = '/%year%/%monthnum%/%day%/%postname%/';

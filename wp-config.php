@@ -5,7 +5,7 @@
 define( 'DISALLOW_FILE_EDIT', true ); // Disable File Editor - Security > Settings > WordPress Tweaks > File Editor
 // END iThemes Security - Do not modify or remove this line
 
-define( 'ITSEC_ENCRYPTION_KEY', 'QU9EM21WLHpiZmRZcEU3dyNjWEVmWmBePV43OSQuSnx5KHl3LTZTNmIwclJzenBxNV8ka1ZqRWwsSjZZMShtYQ==' );
+define( 'ITSEC_ENCRYPTION_KEY', 'TDF5dWI7aG9DNTRTdjZZZno5UCV6KEZ7SFpwRjk3I1kufT8qe3hNfldITW9oOHBvUnpBdVtBZUcuJEFYTT4scQ==' );
 
 define( 'WP_CACHE', true ); // Added by WP Rocket
 
