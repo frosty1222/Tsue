@@ -54,9 +54,6 @@
 						<?php foreach ( $shop_terms as $shop_term ) {
 							$shop_term_fields = get_fields($shop_term->term_id);
 							?>
-                            <!-- <?php echo "<pre>"?>
-                                <?php print_r($shop_term_fields)?>
-                            <?php echo "</pre>"?> -->
                             <div class="shop-main_menuItem__item scrollTo"
                                  data-scrollTo="#filter_content"
                                  ng-class="{'active' : category == '<?php echo $shop_term->slug ?>'}"
