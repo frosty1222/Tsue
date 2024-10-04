@@ -52,6 +52,7 @@
                         </div>
                        
 						<?php foreach ( $shop_terms as $shop_term ) {
+
 							$shop_term_fields = get_fields($shop_term->term_id);
 							?>
                             <div class="shop-main_menuItem__item scrollTo"

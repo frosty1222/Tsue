@@ -1,0 +1,392 @@
+0000.022 (R) [notice] Looking for db archive: file name: backup_2024-10-04-1229_Tsuen_wan_0e89455462d3-db.gz
+0000.022 (R) [notice] Archive is expected to be size: 2354.2 KB: OK
+0000.025 (R) [notice] Will not delete any archives after unpacking them, because there was no cloud storage for this backup
+0000.027 (R) [notice] Unpacking backup... (backup_2024-10-04-1229_Tsuen_wan_0e89455462d3-db.gz, 2.3 Mb)
+0000.031 (R) [notice] Restoring the database (on a large site this can take a long time - if it times out (which can happen if your web hosting company has configured your hosting to limit resources) then you should use a different method, such as phpMyAdmin)...
+0000.060 (R) [notice] Enabling Maintenance mode&#8230;
+0000.066 (R) [notice] Backup of: http://localhost/Tsue
+0000.074 (R) [notice] Content URL: http://localhost/Tsue/wp-content
+0000.074 (R) [notice] Uploads URL: http://localhost/Tsue/wp-content/uploads
+0000.074 (R) [notice] Old table prefix: wp_
+0000.074 (R) [notice] UpdraftPlus plugin slug: updraftplus/updraftplus.php
+0000.074 (R) [notice] Site information: multisite = 0
+0000.074 (R) [notice] Site information: sql_mode = NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
+0000.075 (R) [notice] New table prefix: qe_
+0000.079 (R) [notice] Processing table (InnoDB):  wp_options - will restore as: qe_options
+0000.262 (R) [notice] Atomic restore: dropping original table (wp_options)
+0000.266 (R) [notice] Atomic restore: renaming new table (qe_options) to final table name (wp_options)
+0000.485 (R) [notice] Search and replacing table: wp_options: rows: 1324
+0000.532 (R) [notice] Processing table (InnoDB):  wp_users - will restore as: qe_users
+0000.556 (R) [notice] Atomic restore: dropping original table (wp_users)
+0000.560 (R) [notice] Atomic restore: renaming new table (qe_users) to final table name (wp_users)
+0000.569 (R) [notice] Search and replacing table: wp_users: rows: 6
+0000.571 (R) [notice] Processing table (InnoDB):  wp_usermeta - will restore as: qe_usermeta
+0000.592 (R) [notice] Atomic restore: dropping original table (wp_usermeta)
+0000.596 (R) [notice] Atomic restore: renaming new table (qe_usermeta) to final table name (wp_usermeta)
+0000.604 (R) [notice] Search and replacing table: wp_usermeta: rows: 189
+0000.607 (R) [notice] Processing table (InnoDB):  wp_actionscheduler_actions - will restore as: qe_actionscheduler_actions
+0000.644 (R) [notice] Atomic restore: dropping original table (wp_actionscheduler_actions)
+0000.648 (R) [notice] Atomic restore: renaming new table (qe_actionscheduler_actions) to final table name (wp_actionscheduler_actions)
+0000.657 (R) [notice] Search and replacing table: wp_actionscheduler_actions: rows: 137
+0000.734 (R) [notice] Processing table (InnoDB):  wp_actionscheduler_claims - will restore as: qe_actionscheduler_claims
+0000.757 (R) [notice] Atomic restore: dropping original table (wp_actionscheduler_claims)
+0000.760 (R) [notice] Atomic restore: renaming new table (qe_actionscheduler_claims) to final table name (wp_actionscheduler_claims)
+0000.768 (R) [notice] Search and replacing table: wp_actionscheduler_claims: rows: 0
+0000.768 (R) [notice] Processing table (InnoDB):  wp_actionscheduler_groups - will restore as: qe_actionscheduler_groups
+0000.791 (R) [notice] Atomic restore: dropping original table (wp_actionscheduler_groups)
+0000.794 (R) [notice] Atomic restore: renaming new table (qe_actionscheduler_groups) to final table name (wp_actionscheduler_groups)
+0000.802 (R) [notice] Search and replacing table: wp_actionscheduler_groups: rows: 3
+0000.803 (R) [notice] Processing table (InnoDB):  wp_actionscheduler_logs - will restore as: qe_actionscheduler_logs
+0000.836 (R) [notice] Atomic restore: dropping original table (wp_actionscheduler_logs)
+0000.839 (R) [notice] Atomic restore: renaming new table (qe_actionscheduler_logs) to final table name (wp_actionscheduler_logs)
+0000.847 (R) [notice] Search and replacing table: wp_actionscheduler_logs: rows: 407
+0000.851 (R) [notice] Processing table (InnoDB):  wp_commentmeta - will restore as: qe_commentmeta
+0000.876 (R) [notice] Atomic restore: dropping original table (wp_commentmeta)
+0000.879 (R) [notice] Atomic restore: renaming new table (qe_commentmeta) to final table name (wp_commentmeta)
+0000.886 (R) [notice] Search and replacing table: wp_commentmeta: rows: 0
+0000.887 (R) [notice] Processing table (InnoDB):  wp_comments - will restore as: qe_comments
+0000.914 (R) [notice] Atomic restore: dropping original table (wp_comments)
+0000.918 (R) [notice] Atomic restore: renaming new table (qe_comments) to final table name (wp_comments)
+0000.927 (R) [notice] Search and replacing table: wp_comments: rows: 0
+0000.927 (R) [notice] Processing table (InnoDB):  wp_imagify_files - will restore as: qe_imagify_files
+0000.946 (R) [notice] Atomic restore: dropping original table (wp_imagify_files)
+0000.951 (R) [notice] Atomic restore: renaming new table (qe_imagify_files) to final table name (wp_imagify_files)
+0000.962 (R) [notice] Search and replacing table: wp_imagify_files: rows: 0
+0000.962 (R) [notice] Processing table (InnoDB):  wp_imagify_folders - will restore as: qe_imagify_folders
+0000.984 (R) [notice] Atomic restore: dropping original table (wp_imagify_folders)
+0000.987 (R) [notice] Atomic restore: renaming new table (qe_imagify_folders) to final table name (wp_imagify_folders)
+0000.994 (R) [notice] Search and replacing table: wp_imagify_folders: rows: 0
+0000.995 (R) [notice] Processing table (InnoDB):  wp_itsec_bans - will restore as: qe_itsec_bans
+0001.018 (R) [notice] Atomic restore: dropping original table (wp_itsec_bans)
+0001.022 (R) [notice] Atomic restore: renaming new table (qe_itsec_bans) to final table name (wp_itsec_bans)
+0001.030 (R) [notice] Search and replacing table: wp_itsec_bans: rows: 0
+0001.030 (R) [notice] Processing table (InnoDB):  wp_itsec_dashboard_events - will restore as: qe_itsec_dashboard_events
+0001.052 (R) [notice] Atomic restore: dropping original table (wp_itsec_dashboard_events)
+0001.055 (R) [notice] Atomic restore: renaming new table (qe_itsec_dashboard_events) to final table name (wp_itsec_dashboard_events)
+0001.064 (R) [notice] Search and replacing table: wp_itsec_dashboard_events: rows: 0
+0001.064 (R) [notice] Processing table (InnoDB):  wp_itsec_dashboard_lockouts - will restore as: qe_itsec_dashboard_lockouts
+0001.085 (R) [notice] Atomic restore: dropping original table (wp_itsec_dashboard_lockouts)
+0001.089 (R) [notice] Atomic restore: renaming new table (qe_itsec_dashboard_lockouts) to final table name (wp_itsec_dashboard_lockouts)
+0001.096 (R) [notice] Search and replacing table: wp_itsec_dashboard_lockouts: rows: 0
+0001.096 (R) [notice] Processing table (InnoDB):  wp_itsec_distributed_storage - will restore as: qe_itsec_distributed_storage
+0001.116 (R) [notice] Atomic restore: dropping original table (wp_itsec_distributed_storage)
+0001.119 (R) [notice] Atomic restore: renaming new table (qe_itsec_distributed_storage) to final table name (wp_itsec_distributed_storage)
+0001.126 (R) [notice] Search and replacing table: wp_itsec_distributed_storage: rows: 0
+0001.127 (R) [notice] Processing table (InnoDB):  wp_itsec_fingerprints - will restore as: qe_itsec_fingerprints
+0001.149 (R) [notice] Atomic restore: dropping original table (wp_itsec_fingerprints)
+0001.153 (R) [notice] Atomic restore: renaming new table (qe_itsec_fingerprints) to final table name (wp_itsec_fingerprints)
+0001.162 (R) [notice] Search and replacing table: wp_itsec_fingerprints: rows: 0
+0001.162 (R) [notice] Processing table (InnoDB):  wp_itsec_firewall_rules - will restore as: qe_itsec_firewall_rules
+0001.194 (R) [notice] Database queries processed: 50 in 1.16 seconds
+0001.194 (R) [notice] Atomic restore: dropping original table (wp_itsec_firewall_rules)
+0001.199 (R) [notice] Atomic restore: renaming new table (qe_itsec_firewall_rules) to final table name (wp_itsec_firewall_rules)
+0001.217 (R) [notice] Search and replacing table: wp_itsec_firewall_rules: rows: 0
+0001.218 (R) [notice] Processing table (InnoDB):  wp_itsec_geolocation_cache - will restore as: qe_itsec_geolocation_cache
+0001.283 (R) [notice] Atomic restore: dropping original table (wp_itsec_geolocation_cache)
+0001.287 (R) [notice] Atomic restore: renaming new table (qe_itsec_geolocation_cache) to final table name (wp_itsec_geolocation_cache)
+0001.297 (R) [notice] Search and replacing table: wp_itsec_geolocation_cache: rows: 0
+0001.297 (R) [notice] Processing table (InnoDB):  wp_itsec_lockouts - will restore as: qe_itsec_lockouts
+0001.331 (R) [notice] Atomic restore: dropping original table (wp_itsec_lockouts)
+0001.335 (R) [notice] Atomic restore: renaming new table (qe_itsec_lockouts) to final table name (wp_itsec_lockouts)
+0001.353 (R) [notice] Search and replacing table: wp_itsec_lockouts: rows: 0
+0001.353 (R) [notice] Processing table (InnoDB):  wp_itsec_logs - will restore as: qe_itsec_logs
+0001.381 (R) [notice] Atomic restore: dropping original table (wp_itsec_logs)
+0001.387 (R) [notice] Atomic restore: renaming new table (qe_itsec_logs) to final table name (wp_itsec_logs)
+0001.398 (R) [notice] Search and replacing table: wp_itsec_logs: rows: 0
+0001.398 (R) [notice] Processing table (InnoDB):  wp_itsec_mutexes - will restore as: qe_itsec_mutexes
+0001.414 (R) [notice] Atomic restore: dropping original table (wp_itsec_mutexes)
+0001.417 (R) [notice] Atomic restore: renaming new table (qe_itsec_mutexes) to final table name (wp_itsec_mutexes)
+0001.424 (R) [notice] Search and replacing table: wp_itsec_mutexes: rows: 0
+0001.424 (R) [notice] Processing table (InnoDB):  wp_itsec_opaque_tokens - will restore as: qe_itsec_opaque_tokens
+0001.447 (R) [notice] Atomic restore: dropping original table (wp_itsec_opaque_tokens)
+0001.451 (R) [notice] Atomic restore: renaming new table (qe_itsec_opaque_tokens) to final table name (wp_itsec_opaque_tokens)
+0001.458 (R) [notice] Search and replacing table: wp_itsec_opaque_tokens: rows: 0
+0001.458 (R) [notice] Processing table (InnoDB):  wp_itsec_temp - will restore as: qe_itsec_temp
+0001.484 (R) [notice] Atomic restore: dropping original table (wp_itsec_temp)
+0001.487 (R) [notice] Atomic restore: renaming new table (qe_itsec_temp) to final table name (wp_itsec_temp)
+0001.498 (R) [notice] Search and replacing table: wp_itsec_temp: rows: 0
+0001.498 (R) [notice] Processing table (InnoDB):  wp_itsec_user_groups - will restore as: qe_itsec_user_groups
+0001.508 (R) [notice] Atomic restore: dropping original table (wp_itsec_user_groups)
+0001.511 (R) [notice] Atomic restore: renaming new table (qe_itsec_user_groups) to final table name (wp_itsec_user_groups)
+0001.519 (R) [notice] Search and replacing table: wp_itsec_user_groups: rows: 0
+0001.519 (R) [notice] Processing table (InnoDB):  wp_itsec_vulnerabilities - will restore as: qe_itsec_vulnerabilities
+0001.543 (R) [notice] Atomic restore: dropping original table (wp_itsec_vulnerabilities)
+0001.547 (R) [notice] Atomic restore: renaming new table (qe_itsec_vulnerabilities) to final table name (wp_itsec_vulnerabilities)
+0001.557 (R) [notice] Search and replacing table: wp_itsec_vulnerabilities: rows: 0
+0001.557 (R) [notice] Processing table (InnoDB):  wp_links - will restore as: qe_links
+0001.584 (R) [notice] Atomic restore: dropping original table (wp_links)
+0001.588 (R) [notice] Atomic restore: renaming new table (qe_links) to final table name (wp_links)
+0001.597 (R) [notice] Search and replacing table: wp_links: rows: 0
+0001.597 (R) [notice] Processing table (InnoDB):  wp_postmeta - will restore as: qe_postmeta
+0005.793 (R) [notice] Atomic restore: dropping original table (wp_postmeta)
+0005.798 (R) [notice] Atomic restore: renaming new table (qe_postmeta) to final table name (wp_postmeta)
+0005.913 (R) [notice] Search and replacing table: wp_postmeta: rows: 604
+0006.219 (R) [notice] Processing table (InnoDB):  wp_posts - will restore as: qe_posts
+0006.540 (R) [notice] Database queries processed: 100 in 6.50 seconds
+0006.548 (R) [notice] Atomic restore: dropping original table (wp_posts)
+0006.553 (R) [notice] Atomic restore: renaming new table (qe_posts) to final table name (wp_posts)
+0006.566 (R) [notice] Search and replacing table: wp_posts: rows: 4125
+0006.698 (R) [notice] Processing table (InnoDB):  wp_term_relationships - will restore as: qe_term_relationships
+0006.768 (R) [notice] Atomic restore: dropping original table (wp_term_relationships)
+0006.772 (R) [notice] Atomic restore: renaming new table (qe_term_relationships) to final table name (wp_term_relationships)
+0006.777 (R) [notice] Skipping this table: data in this table (wp_term_relationships) should not be search/replaced
+0006.777 (R) [notice] Processing table (InnoDB):  wp_term_taxonomy - will restore as: qe_term_taxonomy
+0006.815 (R) [notice] Atomic restore: dropping original table (wp_term_taxonomy)
+0006.819 (R) [notice] Atomic restore: renaming new table (qe_term_taxonomy) to final table name (wp_term_taxonomy)
+0006.827 (R) [notice] Search and replacing table: wp_term_taxonomy: rows: 314
+0006.832 (R) [notice] Processing table (InnoDB):  wp_termmeta - will restore as: qe_termmeta
+0006.858 (R) [notice] Atomic restore: dropping original table (wp_termmeta)
+0006.862 (R) [notice] Atomic restore: renaming new table (qe_termmeta) to final table name (wp_termmeta)
+0006.869 (R) [notice] Search and replacing table: wp_termmeta: rows: 30
+0006.870 (R) [notice] Processing table (InnoDB):  wp_terms - will restore as: qe_terms
+0006.900 (R) [notice] Atomic restore: dropping original table (wp_terms)
+0006.904 (R) [notice] Atomic restore: renaming new table (qe_terms) to final table name (wp_terms)
+0006.919 (R) [notice] Search and replacing table: wp_terms: rows: 314
+0006.923 (R) [notice] Processing table (InnoDB):  wp_wpr_rocket_cache - will restore as: qe_wpr_rocket_cache
+0006.966 (R) [notice] Atomic restore: dropping original table (wp_wpr_rocket_cache)
+0006.973 (R) [notice] Atomic restore: renaming new table (qe_wpr_rocket_cache) to final table name (wp_wpr_rocket_cache)
+0006.985 (R) [notice] Search and replacing table: wp_wpr_rocket_cache: rows: 205
+0007.148 (R) [notice] Processing table (InnoDB):  wp_wpr_rucss_used_css - will restore as: qe_wpr_rucss_used_css
+0007.174 (R) [notice] Atomic restore: dropping original table (wp_wpr_rucss_used_css)
+0007.179 (R) [notice] Atomic restore: renaming new table (qe_wpr_rucss_used_css) to final table name (wp_wpr_rucss_used_css)
+0007.189 (R) [notice] Search and replacing table: wp_wpr_rucss_used_css: rows: 0
+0007.189 (R) [notice] Processing table (InnoDB):  wp_cff_facebook_feed_locator - will restore as: qe_cff_facebook_feed_locator
+0007.212 (R) [notice] Atomic restore: dropping original table (wp_cff_facebook_feed_locator)
+0007.216 (R) [notice] Atomic restore: renaming new table (qe_cff_facebook_feed_locator) to final table name (wp_cff_facebook_feed_locator)
+0007.225 (R) [notice] Search and replacing table: wp_cff_facebook_feed_locator: rows: 0
+0007.225 (R) [notice] Processing table (InnoDB):  wp_cff_feed_caches - will restore as: qe_cff_feed_caches
+0007.251 (R) [notice] Atomic restore: dropping original table (wp_cff_feed_caches)
+0007.255 (R) [notice] Atomic restore: renaming new table (qe_cff_feed_caches) to final table name (wp_cff_feed_caches)
+0007.264 (R) [notice] Search and replacing table: wp_cff_feed_caches: rows: 0
+0007.264 (R) [notice] Processing table (InnoDB):  wp_cff_feeds - will restore as: qe_cff_feeds
+0007.294 (R) [notice] Atomic restore: dropping original table (wp_cff_feeds)
+0007.298 (R) [notice] Atomic restore: renaming new table (qe_cff_feeds) to final table name (wp_cff_feeds)
+0007.307 (R) [notice] Search and replacing table: wp_cff_feeds: rows: 0
+0007.307 (R) [notice] Processing table (InnoDB):  wp_cff_sources - will restore as: qe_cff_sources
+0007.338 (R) [notice] Atomic restore: dropping original table (wp_cff_sources)
+0007.343 (R) [notice] Atomic restore: renaming new table (qe_cff_sources) to final table name (wp_cff_sources)
+0007.352 (R) [notice] Search and replacing table: wp_cff_sources: rows: 0
+0007.352 (R) [notice] Processing table (InnoDB):  wp_ctf_feed_caches - will restore as: qe_ctf_feed_caches
+0007.373 (R) [notice] Atomic restore: dropping original table (wp_ctf_feed_caches)
+0007.377 (R) [notice] Atomic restore: renaming new table (qe_ctf_feed_caches) to final table name (wp_ctf_feed_caches)
+0007.385 (R) [notice] Search and replacing table: wp_ctf_feed_caches: rows: 0
+0007.385 (R) [notice] Processing table (InnoDB):  wp_ctf_feed_locator - will restore as: qe_ctf_feed_locator
+0007.401 (R) [notice] Atomic restore: dropping original table (wp_ctf_feed_locator)
+0007.405 (R) [notice] Atomic restore: renaming new table (qe_ctf_feed_locator) to final table name (wp_ctf_feed_locator)
+0007.413 (R) [notice] Search and replacing table: wp_ctf_feed_locator: rows: 0
+0007.413 (R) [notice] Processing table (InnoDB):  wp_ctf_feeds - will restore as: qe_ctf_feeds
+0007.435 (R) [notice] Atomic restore: dropping original table (wp_ctf_feeds)
+0007.438 (R) [notice] Atomic restore: renaming new table (qe_ctf_feeds) to final table name (wp_ctf_feeds)
+0007.446 (R) [notice] Search and replacing table: wp_ctf_feeds: rows: 0
+0007.446 (R) [notice] Processing table (InnoDB):  wp_ctf_feeds_posts - will restore as: qe_ctf_feeds_posts
+0007.469 (R) [notice] Atomic restore: dropping original table (wp_ctf_feeds_posts)
+0007.473 (R) [notice] Atomic restore: renaming new table (qe_ctf_feeds_posts) to final table name (wp_ctf_feeds_posts)
+0007.481 (R) [notice] Search and replacing table: wp_ctf_feeds_posts: rows: 0
+0007.481 (R) [notice] Processing table (InnoDB):  wp_ctf_posts - will restore as: qe_ctf_posts
+0007.490 (R) [notice] Atomic restore: dropping original table (wp_ctf_posts)
+0007.494 (R) [notice] Atomic restore: renaming new table (qe_ctf_posts) to final table name (wp_ctf_posts)
+0007.503 (R) [notice] Search and replacing table: wp_ctf_posts: rows: 0
+0007.503 (R) [notice] Processing table (InnoDB):  wp_db7_forms - will restore as: qe_db7_forms
+0007.512 (R) [notice] Atomic restore: dropping original table (wp_db7_forms)
+0007.515 (R) [notice] Atomic restore: renaming new table (qe_db7_forms) to final table name (wp_db7_forms)
+0007.522 (R) [notice] Search and replacing table: wp_db7_forms: rows: 0
+0007.522 (R) [notice] Processing table (InnoDB):  wp_gdpr_cc_options - will restore as: qe_gdpr_cc_options
+0007.532 (R) [notice] Atomic restore: dropping original table (wp_gdpr_cc_options)
+0007.533 (R) [notice] Atomic restore: renaming new table (qe_gdpr_cc_options) to final table name (wp_gdpr_cc_options)
+0007.540 (R) [notice] Search and replacing table: wp_gdpr_cc_options: rows: 0
+0007.540 (R) [notice] Processing table (InnoDB):  wp_postexpirator_debug - will restore as: qe_postexpirator_debug
+0007.549 (R) [notice] Atomic restore: dropping original table (wp_postexpirator_debug)
+0007.552 (R) [notice] Atomic restore: renaming new table (qe_postexpirator_debug) to final table name (wp_postexpirator_debug)
+0007.560 (R) [notice] Search and replacing table: wp_postexpirator_debug: rows: 0
+0007.560 (R) [notice] Processing table (InnoDB):  wp_ppfuture_actions_args - will restore as: qe_ppfuture_actions_args
+0007.582 (R) [notice] Atomic restore: dropping original table (wp_ppfuture_actions_args)
+0007.586 (R) [notice] Atomic restore: renaming new table (qe_ppfuture_actions_args) to final table name (wp_ppfuture_actions_args)
+0007.594 (R) [notice] Search and replacing table: wp_ppfuture_actions_args: rows: 43
+0007.622 (R) [notice] Processing table (InnoDB):  wp_sbi_feed_caches - will restore as: qe_sbi_feed_caches
+0007.645 (R) [notice] Atomic restore: dropping original table (wp_sbi_feed_caches)
+0007.648 (R) [notice] Database queries processed: 150 in 7.61 seconds
+0007.648 (R) [notice] Atomic restore: renaming new table (qe_sbi_feed_caches) to final table name (wp_sbi_feed_caches)
+0007.656 (R) [notice] Search and replacing table: wp_sbi_feed_caches: rows: 16
+0007.656 (R) [notice] Processing table (InnoDB):  wp_sbi_feeds - will restore as: qe_sbi_feeds
+0007.679 (R) [notice] Atomic restore: dropping original table (wp_sbi_feeds)
+0007.682 (R) [notice] Atomic restore: renaming new table (qe_sbi_feeds) to final table name (wp_sbi_feeds)
+0007.689 (R) [notice] Search and replacing table: wp_sbi_feeds: rows: 2
+0007.690 (R) [notice] Processing table (InnoDB):  wp_sbi_instagram_feed_locator - will restore as: qe_sbi_instagram_feed_locator
+0007.715 (R) [notice] Atomic restore: dropping original table (wp_sbi_instagram_feed_locator)
+0007.718 (R) [notice] Atomic restore: renaming new table (qe_sbi_instagram_feed_locator) to final table name (wp_sbi_instagram_feed_locator)
+0007.726 (R) [notice] Search and replacing table: wp_sbi_instagram_feed_locator: rows: 2
+0007.727 (R) [notice] Processing table (InnoDB):  wp_sbi_instagram_feeds_posts - will restore as: qe_sbi_instagram_feeds_posts
+0007.752 (R) [notice] Atomic restore: dropping original table (wp_sbi_instagram_feeds_posts)
+0007.757 (R) [notice] Atomic restore: renaming new table (qe_sbi_instagram_feeds_posts) to final table name (wp_sbi_instagram_feeds_posts)
+0007.764 (R) [notice] Search and replacing table: wp_sbi_instagram_feeds_posts: rows: 54
+0007.765 (R) [notice] Processing table (InnoDB):  wp_sbi_instagram_posts - will restore as: qe_sbi_instagram_posts
+0007.799 (R) [notice] Atomic restore: dropping original table (wp_sbi_instagram_posts)
+0007.804 (R) [notice] Atomic restore: renaming new table (qe_sbi_instagram_posts) to final table name (wp_sbi_instagram_posts)
+0007.813 (R) [notice] Search and replacing table: wp_sbi_instagram_posts: rows: 54
+0007.815 (R) [notice] Processing table (InnoDB):  wp_sbi_sources - will restore as: qe_sbi_sources
+0007.840 (R) [notice] Atomic restore: dropping original table (wp_sbi_sources)
+0007.843 (R) [notice] Atomic restore: renaming new table (qe_sbi_sources) to final table name (wp_sbi_sources)
+0007.852 (R) [notice] Search and replacing table: wp_sbi_sources: rows: 2
+0007.852 (R) [notice] Processing table (InnoDB):  wp_sbr_feed_caches - will restore as: qe_sbr_feed_caches
+0007.875 (R) [notice] Atomic restore: dropping original table (wp_sbr_feed_caches)
+0007.878 (R) [notice] Atomic restore: renaming new table (qe_sbr_feed_caches) to final table name (wp_sbr_feed_caches)
+0007.888 (R) [notice] Search and replacing table: wp_sbr_feed_caches: rows: 0
+0007.888 (R) [notice] Processing table (InnoDB):  wp_sbr_feed_locator - will restore as: qe_sbr_feed_locator
+0007.906 (R) [notice] Atomic restore: dropping original table (wp_sbr_feed_locator)
+0007.909 (R) [notice] Atomic restore: renaming new table (qe_sbr_feed_locator) to final table name (wp_sbr_feed_locator)
+0007.918 (R) [notice] Search and replacing table: wp_sbr_feed_locator: rows: 0
+0007.918 (R) [notice] Processing table (InnoDB):  wp_sbr_feeds - will restore as: qe_sbr_feeds
+0007.940 (R) [notice] Atomic restore: dropping original table (wp_sbr_feeds)
+0007.944 (R) [notice] Atomic restore: renaming new table (qe_sbr_feeds) to final table name (wp_sbr_feeds)
+0007.952 (R) [notice] Search and replacing table: wp_sbr_feeds: rows: 0
+0007.952 (R) [notice] Processing table (InnoDB):  wp_sbr_reviews_posts - will restore as: qe_sbr_reviews_posts
+0007.977 (R) [notice] Atomic restore: dropping original table (wp_sbr_reviews_posts)
+0007.980 (R) [notice] Atomic restore: renaming new table (qe_sbr_reviews_posts) to final table name (wp_sbr_reviews_posts)
+0007.991 (R) [notice] Search and replacing table: wp_sbr_reviews_posts: rows: 0
+0007.991 (R) [notice] Processing table (InnoDB):  wp_sbr_sources - will restore as: qe_sbr_sources
+0008.018 (R) [notice] Atomic restore: dropping original table (wp_sbr_sources)
+0008.021 (R) [notice] Atomic restore: renaming new table (qe_sbr_sources) to final table name (wp_sbr_sources)
+0008.030 (R) [notice] Search and replacing table: wp_sbr_sources: rows: 0
+0008.030 (R) [notice] Processing table (InnoDB):  wp_sbtt_feed_caches - will restore as: qe_sbtt_feed_caches
+0008.053 (R) [notice] Atomic restore: dropping original table (wp_sbtt_feed_caches)
+0008.057 (R) [notice] Atomic restore: renaming new table (qe_sbtt_feed_caches) to final table name (wp_sbtt_feed_caches)
+0008.065 (R) [notice] Search and replacing table: wp_sbtt_feed_caches: rows: 0
+0008.065 (R) [notice] Processing table (InnoDB):  wp_sbtt_feed_locator - will restore as: qe_sbtt_feed_locator
+0008.087 (R) [notice] Atomic restore: dropping original table (wp_sbtt_feed_locator)
+0008.090 (R) [notice] Atomic restore: renaming new table (qe_sbtt_feed_locator) to final table name (wp_sbtt_feed_locator)
+0008.098 (R) [notice] Search and replacing table: wp_sbtt_feed_locator: rows: 0
+0008.098 (R) [notice] Processing table (InnoDB):  wp_sbtt_feeds - will restore as: qe_sbtt_feeds
+0008.132 (R) [notice] Atomic restore: dropping original table (wp_sbtt_feeds)
+0008.136 (R) [notice] Atomic restore: renaming new table (qe_sbtt_feeds) to final table name (wp_sbtt_feeds)
+0008.144 (R) [notice] Search and replacing table: wp_sbtt_feeds: rows: 0
+0008.144 (R) [notice] Processing table (InnoDB):  wp_sbtt_sources - will restore as: qe_sbtt_sources
+0008.167 (R) [notice] Atomic restore: dropping original table (wp_sbtt_sources)
+0008.171 (R) [notice] Atomic restore: renaming new table (qe_sbtt_sources) to final table name (wp_sbtt_sources)
+0008.180 (R) [notice] Search and replacing table: wp_sbtt_sources: rows: 0
+0008.181 (R) [notice] Processing table (InnoDB):  wp_sbtt_tiktok_posts - will restore as: qe_sbtt_tiktok_posts
+0008.199 (R) [notice] Atomic restore: dropping original table (wp_sbtt_tiktok_posts)
+0008.203 (R) [notice] Atomic restore: renaming new table (qe_sbtt_tiktok_posts) to final table name (wp_sbtt_tiktok_posts)
+0008.212 (R) [notice] Search and replacing table: wp_sbtt_tiktok_posts: rows: 0
+0008.212 (R) [notice] Processing table (InnoDB):  wp_sby_feed_caches - will restore as: qe_sby_feed_caches
+0008.233 (R) [notice] Atomic restore: dropping original table (wp_sby_feed_caches)
+0008.237 (R) [notice] Atomic restore: renaming new table (qe_sby_feed_caches) to final table name (wp_sby_feed_caches)
+0008.247 (R) [notice] Search and replacing table: wp_sby_feed_caches: rows: 0
+0008.247 (R) [notice] Processing table (InnoDB):  wp_sby_feed_locator - will restore as: qe_sby_feed_locator
+0008.278 (R) [notice] Atomic restore: dropping original table (wp_sby_feed_locator)
+0008.285 (R) [notice] Atomic restore: renaming new table (qe_sby_feed_locator) to final table name (wp_sby_feed_locator)
+0008.296 (R) [notice] Search and replacing table: wp_sby_feed_locator: rows: 0
+0008.296 (R) [notice] Processing table (InnoDB):  wp_sby_feeds - will restore as: qe_sby_feeds
+0008.330 (R) [notice] Atomic restore: dropping original table (wp_sby_feeds)
+0008.335 (R) [notice] Atomic restore: renaming new table (qe_sby_feeds) to final table name (wp_sby_feeds)
+0008.344 (R) [notice] Search and replacing table: wp_sby_feeds: rows: 0
+0008.344 (R) [notice] Processing table (InnoDB):  wp_wpfm_backup - will restore as: qe_wpfm_backup
+0008.358 (R) [notice] Atomic restore: dropping original table (wp_wpfm_backup)
+0008.361 (R) [notice] Atomic restore: renaming new table (qe_wpfm_backup) to final table name (wp_wpfm_backup)
+0008.369 (R) [notice] Search and replacing table: wp_wpfm_backup: rows: 0
+0008.369 (R) [notice] Processing table (InnoDB):  wp_yoast_indexable - will restore as: qe_yoast_indexable
+0008.446 (R) [notice] Atomic restore: dropping original table (wp_yoast_indexable)
+0008.455 (R) [notice] Atomic restore: renaming new table (qe_yoast_indexable) to final table name (wp_yoast_indexable)
+0008.469 (R) [notice] Search and replacing table: wp_yoast_indexable: rows: 407
+0008.778 (R) [notice] Processing table (InnoDB):  wp_yoast_indexable_hierarchy - will restore as: qe_yoast_indexable_hierarchy
+0008.809 (R) [notice] Atomic restore: dropping original table (wp_yoast_indexable_hierarchy)
+0008.812 (R) [notice] Atomic restore: renaming new table (qe_yoast_indexable_hierarchy) to final table name (wp_yoast_indexable_hierarchy)
+0008.821 (R) [notice] Search and replacing table: wp_yoast_indexable_hierarchy: rows: 398
+0008.825 (R) [notice] Processing table (InnoDB):  wp_yoast_migrations - will restore as: qe_yoast_migrations
+0008.854 (R) [notice] Database queries processed: 200 in 8.82 seconds
+0008.858 (R) [notice] Atomic restore: dropping original table (wp_yoast_migrations)
+0008.861 (R) [notice] Atomic restore: renaming new table (qe_yoast_migrations) to final table name (wp_yoast_migrations)
+0008.868 (R) [notice] Search and replacing table: wp_yoast_migrations: rows: 24
+0008.869 (R) [notice] Processing table (InnoDB):  wp_yoast_primary_term - will restore as: qe_yoast_primary_term
+0008.885 (R) [notice] Atomic restore: dropping original table (wp_yoast_primary_term)
+0008.889 (R) [notice] Atomic restore: renaming new table (qe_yoast_primary_term) to final table name (wp_yoast_primary_term)
+0008.898 (R) [notice] Search and replacing table: wp_yoast_primary_term: rows: 0
+0008.898 (R) [notice] Processing table (InnoDB):  wp_yoast_seo_links - will restore as: qe_yoast_seo_links
+0008.921 (R) [notice] Disabling Maintenance mode&#8230;
+0008.921 (R) [notice] Atomic restore: dropping original table (wp_yoast_seo_links)
+0008.926 (R) [notice] Atomic restore: renaming new table (qe_yoast_seo_links) to final table name (wp_yoast_seo_links)
+0008.935 (R) [notice] Search and replacing table: wp_yoast_seo_links: rows: 0
+0008.935 (R) [notice] Finished: lines processed: 209 in 8.90 seconds
+0008.935 (R) [notice] Cleaning up rubbish...
+0008.936 (R) [notice] Database search and replace: replace http://localhost/Tsue in backup dump with http://localhost/tsue
+0008.937 (R) [notice] Database search and replace: replace http://www.localhost/Tsue in backup dump with http://localhost/tsue
+0008.937 (R) [notice] Database search and replace: replace https://www.localhost/Tsue in backup dump with http://localhost/tsue
+0008.937 (R) [notice] Database search and replace: replace https://localhost/Tsue in backup dump with http://localhost/tsue
+0008.938 (R) [notice] Search and replacing table: wp_actionscheduler_actions: already done
+0008.938 (R) [notice] Search and replacing table: wp_actionscheduler_claims: already done
+0008.938 (R) [notice] Search and replacing table: wp_actionscheduler_groups: already done
+0008.938 (R) [notice] Search and replacing table: wp_actionscheduler_logs: already done
+0008.938 (R) [notice] Search and replacing table: wp_cff_facebook_feed_locator: already done
+0008.938 (R) [notice] Search and replacing table: wp_cff_feed_caches: already done
+0008.938 (R) [notice] Search and replacing table: wp_cff_feeds: already done
+0008.938 (R) [notice] Search and replacing table: wp_cff_sources: already done
+0008.938 (R) [notice] Search and replacing table: wp_commentmeta: already done
+0008.938 (R) [notice] Search and replacing table: wp_comments: already done
+0008.938 (R) [notice] Search and replacing table: wp_ctf_feed_caches: already done
+0008.938 (R) [notice] Search and replacing table: wp_ctf_feed_locator: already done
+0008.938 (R) [notice] Search and replacing table: wp_ctf_feeds: already done
+0008.938 (R) [notice] Search and replacing table: wp_ctf_feeds_posts: already done
+0008.938 (R) [notice] Search and replacing table: wp_ctf_posts: already done
+0008.938 (R) [notice] Search and replacing table: wp_db7_forms: already done
+0008.938 (R) [notice] Search and replacing table: wp_gdpr_cc_options: already done
+0008.938 (R) [notice] Search and replacing table: wp_imagify_files: already done
+0008.938 (R) [notice] Search and replacing table: wp_imagify_folders: already done
+0008.939 (R) [notice] Search and replacing table: wp_itsec_bans: already done
+0008.939 (R) [notice] Search and replacing table: wp_itsec_dashboard_events: already done
+0008.939 (R) [notice] Search and replacing table: wp_itsec_dashboard_lockouts: already done
+0008.939 (R) [notice] Search and replacing table: wp_itsec_distributed_storage: already done
+0008.939 (R) [notice] Search and replacing table: wp_itsec_fingerprints: already done
+0008.939 (R) [notice] Search and replacing table: wp_itsec_firewall_rules: already done
+0008.939 (R) [notice] Search and replacing table: wp_itsec_geolocation_cache: already done
+0008.939 (R) [notice] Search and replacing table: wp_itsec_lockouts: already done
+0008.939 (R) [notice] Search and replacing table: wp_itsec_logs: already done
+0008.939 (R) [notice] Search and replacing table: wp_itsec_mutexes: already done
+0008.939 (R) [notice] Search and replacing table: wp_itsec_opaque_tokens: already done
+0008.939 (R) [notice] Search and replacing table: wp_itsec_temp: already done
+0008.939 (R) [notice] Search and replacing table: wp_itsec_user_groups: already done
+0008.939 (R) [notice] Search and replacing table: wp_itsec_vulnerabilities: already done
+0008.939 (R) [notice] Search and replacing table: wp_links: already done
+0008.939 (R) [notice] Search and replacing table: wp_options: already done
+0008.939 (R) [notice] Search and replacing table: wp_postexpirator_debug: already done
+0008.939 (R) [notice] Search and replacing table: wp_postmeta: already done
+0008.939 (R) [notice] Search and replacing table: wp_posts: already done
+0008.939 (R) [notice] Search and replacing table: wp_ppfuture_actions_args: already done
+0008.939 (R) [notice] Search and replacing table: wp_sbi_feed_caches: already done
+0008.939 (R) [notice] Search and replacing table: wp_sbi_feeds: already done
+0008.939 (R) [notice] Search and replacing table: wp_sbi_instagram_feed_locator: already done
+0008.939 (R) [notice] Search and replacing table: wp_sbi_instagram_feeds_posts: already done
+0008.939 (R) [notice] Search and replacing table: wp_sbi_instagram_posts: already done
+0008.940 (R) [notice] Search and replacing table: wp_sbi_sources: already done
+0008.940 (R) [notice] Search and replacing table: wp_sbr_feed_caches: already done
+0008.940 (R) [notice] Search and replacing table: wp_sbr_feed_locator: already done
+0008.940 (R) [notice] Search and replacing table: wp_sbr_feeds: already done
+0008.940 (R) [notice] Search and replacing table: wp_sbr_reviews_posts: already done
+0008.940 (R) [notice] Search and replacing table: wp_sbr_sources: already done
+0008.940 (R) [notice] Search and replacing table: wp_sbtt_feed_caches: already done
+0008.940 (R) [notice] Search and replacing table: wp_sbtt_feed_locator: already done
+0008.940 (R) [notice] Search and replacing table: wp_sbtt_feeds: already done
+0008.940 (R) [notice] Search and replacing table: wp_sbtt_sources: already done
+0008.940 (R) [notice] Search and replacing table: wp_sbtt_tiktok_posts: already done
+0008.940 (R) [notice] Search and replacing table: wp_sby_feed_caches: already done
+0008.940 (R) [notice] Search and replacing table: wp_sby_feed_locator: already done
+0008.940 (R) [notice] Search and replacing table: wp_sby_feeds: already done
+0008.940 (R) [notice] Search and replacing table: wp_term_relationships: already done
+0008.940 (R) [notice] Search and replacing table: wp_term_taxonomy: already done
+0008.940 (R) [notice] Search and replacing table: wp_termmeta: already done
+0008.940 (R) [notice] Search and replacing table: wp_terms: already done
+0008.940 (R) [notice] Search and replacing table: wp_usermeta: already done
+0008.940 (R) [notice] Search and replacing table: wp_users: already done
+0008.940 (R) [notice] Search and replacing table: wp_wpfm_backup: already done
+0008.940 (R) [notice] Search and replacing table: wp_wpr_rocket_cache: already done
+0008.940 (R) [notice] Search and replacing table: wp_wpr_rucss_used_css: already done
+0008.940 (R) [notice] Search and replacing table: wp_yoast_indexable: already done
+0008.940 (R) [notice] Search and replacing table: wp_yoast_indexable_hierarchy: already done
+0008.940 (R) [notice] Search and replacing table: wp_yoast_migrations: already done
+0008.941 (R) [notice] Search and replacing table: wp_yoast_primary_term: already done
+0008.941 (R) [notice] Search and replacing table: wp_yoast_seo_links: already done
+0008.941 (R) [notice] Tables examined: 71
+0008.941 (R) [notice] Rows examined: 8660
+0008.941 (R) [notice] Changes made: 1951
+0008.941 (R) [notice] SQL update commands run: 1033
+0008.941 (R) [notice] Errors: 0
+0008.941 (R) [notice] Time taken (seconds): 1.4
+0008.979 (R) [notice] Restore successful!

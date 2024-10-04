@@ -7,19 +7,20 @@
         <div class="inner-feature">
             <?= get_field('is_new') ? '<span class="feature">'.esc_html__( 'New', 'tsuen').'</span> ': '';?>
             <?php $image_thumbnail = get_field('thumbnail'); ?>
-            <?php if(has_post_thumbnail( )): ?>
+            <?php if(has_post_thumbnail()): ?>
                 <div class="ratio11">
-                    <?php the_post_thumbnail(); ?>
+                    <?php the_post_thumbnail('full', ['loading' => 'lazy']); ?>
                 </div>
             <?php else: ?>
-                <?php if (!empty( $image_thumbnail )): ?>
+                <?php if (!empty($image_thumbnail)): ?>
                     <div class="ratio11">
-                        <?= wp_get_attachment_image( $image_thumbnail, 'full' ); ?>
+                        <?= wp_get_attachment_image($image_thumbnail, 'full', false, ['loading' => 'lazy']); ?>
                     </div>
                 <?php else: ?>
-                    <div class="no-image ratio11">'<?= esc_html('No image') ?> '</div>
+                    <div class="no-image ratio11"><?= esc_html('No image') ?></div>
                 <?php endif; ?>
             <?php endif; ?>
+
             <div class="content-hover">
                 <?php if(get_field('list_description')) :?>
                     <div class="list-bottom">
@@ -38,7 +39,7 @@
                                                 if($ext=='svg'){
                                                     $file = file_get_contents($image_url, true);
                                                 }else{
-                                                    $file = wp_get_attachment_image($image_id,'full');
+                                                    $file = wp_get_attachment_image($image_id,'full',false,['loading' => 'lazy']);
                                                 }
                                                 echo  $file ;
                                             echo '</li>';

@@ -23,7 +23,7 @@ if ( function_exists('register_sidebar') )
 	));
 
 add_filter('use_block_editor_for_post', '__return_false');
-
+add_filter('wp_lazy_loading_enabled', '__return_false');
 function tsuen_wan_setup()
 {
     /*

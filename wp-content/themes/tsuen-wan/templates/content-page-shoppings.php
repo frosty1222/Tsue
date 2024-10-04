@@ -10,10 +10,6 @@ $post_type = "shops";
 $post_category = "shop-categories";
 $post_page_id = $post_type."-page";
 
-$shop_terms = get_terms( array(
-	'taxonomy' => $post_category,
-	'hide_empty' => false,
-));
 $current_type = "all";
 $content_type = $post_type;
 if(isset($wp_query->query_vars['t'])) {
