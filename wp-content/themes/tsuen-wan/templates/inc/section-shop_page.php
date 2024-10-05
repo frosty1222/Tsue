@@ -34,7 +34,7 @@ $lang = pll_current_language();
 	<?php
 	$filter_content_id = "filter_content";
 	include( locate_template( 'templates/inc/block-shop_menu.php', false, false ) ); ?>
-    <div class="shop-result active" ng-class="{'active' : sort!='floorplan'}">
+    <div class="shop-result" ng-class="{'active' : sort!='floorplan'}">
         <div class="container">
             <div id="result_content" class="content_section list_section loading"
                  ng-class="{'grid_display' : display == 'grid', 'list_display' : display == 'list', 'loading' : loading == true, 'active' : is_floorplan == false}">
@@ -125,4 +125,7 @@ $lang = pll_current_language();
             </div>
         </div>
     </div>
+    <div class="shop-map"  ng-class="{'active' : sort =='floorplan'}">
+		<?php include( locate_template( 'map/floorplan.php', false, false ) ); ?>
+	</div>
 </section>

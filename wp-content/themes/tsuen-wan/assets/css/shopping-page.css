@@ -265,7 +265,20 @@ body.fixed.show-fixed #header_menu_section {
     background: #FFF;
     z-index: 1;
 }
-
+.shop-result.active{
+    display: block;
+}
+.shop-result{
+    display: none;
+}
+.shop-map{
+    display: none;
+}
+.shop-map.active{
+    display: block;
+    background: #FFF;
+    z-index: 1;
+}
 /* Map */
 
 #map {

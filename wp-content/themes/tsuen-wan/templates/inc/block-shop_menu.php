@@ -13,7 +13,7 @@
                 <div class="shop-main_menu__btn scrollTo" ng-class="{active: sort=='alphabetical'}"
                      ng-click="sort='alphabetical'; reset_all_sort()" data-scrollTo="#filter_content">A - Z
                 </div>
-                <div class="shop-main_menu__btn scrollTo" ng-class="{active: sort=='floorplan'}"
+                <div class="shop-main_menu__btn scrollTo" ng-class="{active: sort == 'floorplan'}"
                      ng-click="sort='floorplan'; reset_all_sort()" data-scrollTo="#filter_content">
 					<?php pll_e( "Floor Plan" ); ?>
                 </div>
@@ -30,7 +30,7 @@
                      data-scrollTo="#filter_content">
                     <img src="<?php echo template_img_url( "block.svg" ) ?>" alt="block">
                 </div>
-                <div class="shop-main_sort__btn layout scrollTo" ng-click="display='list'; is_floorplan = false"
+                <div class="shop-main_sort__btn layout scrollTo" ng-click="display='list'; is_floorplan = false;console.log(display)"
                      ng-class="{'active' : display=='list'}" data-target="list_display"
                      data-scrollTo="#filter_content">
                     <img src="<?php echo template_img_url( "list.svg" ) ?>" alt="list">

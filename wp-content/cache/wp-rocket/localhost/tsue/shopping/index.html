@@ -196,7 +196,7 @@
 <link rel='stylesheet' id='selectric-css' href='http://localhost/tsue/wp-content/themes/tsuen-wan/assets/css/selectric.css?ver=1728039015' media='all' />
 <link rel='stylesheet' id='service-css' href='http://localhost/tsue/wp-content/themes/tsuen-wan/assets/css/service.css?ver=1728039015' media='all' />
 <link rel='stylesheet' id='shop_detail-css' href='http://localhost/tsue/wp-content/themes/tsuen-wan/assets/css/shop_detail.css?ver=1728039015' media='all' />
-<link rel='stylesheet' id='shopping-page-css' href='http://localhost/tsue/wp-content/themes/tsuen-wan/assets/css/shopping-page.css?ver=1728039015' media='all' />
+<link rel='stylesheet' id='shopping-page-css' href='http://localhost/tsue/wp-content/themes/tsuen-wan/assets/css/shopping-page.css?ver=1728109321' media='all' />
 <link rel='stylesheet' id='splide.min-css' href='http://localhost/tsue/wp-content/themes/tsuen-wan/assets/css/splide.min.css?ver=1728039015' media='all' />
 <link rel='stylesheet' id='swiper-bundle.min-css' href='http://localhost/tsue/wp-content/themes/tsuen-wan/assets/css/swiper-bundle.min.css?ver=1728039015' media='all' />
 <link rel='stylesheet' id='moove_gdpr_frontend-css' href='http://localhost/tsue/wp-content/plugins/gdpr-cookie-compliance/dist/styles/gdpr-main.css?ver=4.14.0' media='all' />
@@ -340,19 +340,19 @@
             <div class="shop-top-menu">
                 <ul class="shop-menu_container tab-menu listmenu">
                                         <li class="shop-menu_btn active ">
-                        <a href="#tab_category" data-href-mobile="#tab_mobile_category" class="shop-menu_control" data-post-type="shops">
+                        <a href="#tab_category" data-href-mobile="#tab_mobile_category" class="shop-menu_control" data-post-type="shops" onclick="loadShopData()">
                             Category                        </a>
                     </li>
                                         <li class="shop-menu_btn  ">
-                        <a href="#tab_a-z" data-href-mobile="#tab_mobile_a-z" class="shop-menu_control" data-post-type="shops">
+                        <a href="#tab_a-z" data-href-mobile="#tab_mobile_a-z" class="shop-menu_control" data-post-type="shops" onclick="loadShopData()">
                             A-Z                        </a>
                     </li>
                                         <li class="shop-menu_btn  ">
-                        <a href="#tab_floor" data-href-mobile="#tab_mobile_floor" class="shop-menu_control" data-post-type="shops">
+                        <a href="#tab_floor" data-href-mobile="#tab_mobile_floor" class="shop-menu_control" data-post-type="shops" onclick="loadShopData()">
                             Floor                        </a>
                     </li>
                                         <li class="shop-menu_btn  ">
-                        <a href="#tab_floor-plan" data-href-mobile="#tab_mobile_floor-plan" class="shop-menu_control" data-post-type="shops">
+                        <a href="#tab_floor-plan" data-href-mobile="#tab_mobile_floor-plan" class="shop-menu_control" data-post-type="shops" onclick="loadShopData()">
                             Floor Plan                        </a>
                     </li>
                                     </ul>
@@ -9329,83 +9329,70 @@
         console.log("Coordinates: " + event.latlng.lat + ' , ' + event.latlng.lng);
         //L.marker(event.latlng).addTo(map);
     });
+    let fragment = document.createDocumentFragment(); // Create a fragment to store all elements
+// Function to run the loop when the condition is met
+function loadShopData() {
+    let fragment = document.createDocumentFragment(); // Create a fragment to store all elements
     for (var shopNumber in shopData) {
         var shopRow = shopData[shopNumber][0];
-        var shopListShop = $('<a>').attr('href', 'javascript:void(0)').data('shop', shopNumber).addClass('shop').click(function() {
-            focusShop($(this).data('shop'));
-        });
+        
+        var shopListShop = $('<a>')
+            .attr('href', 'javascript:void(0)')
+            .data('shop', shopNumber)
+            .addClass('shop hide-shop')
+            .click(function() {
+                focusShop($(this).data('shop'));
+            });
+        
         var shopVerticalCenterer = $('<div>').addClass('shop-vertical-centerer');
-        if(shopRow.featured) {
-            shopVerticalCenterer.append($('<img>').attr('src', shopRow.featured));
-        } else {
-            shopVerticalCenterer.append($('<img>').attr('src', shopRow.thumbnail));
-        }
-        shopVerticalCenterer.append($('<div>').addClass('shop-info')
-            .append($('<div>').addClass('shop-name').text(shopRow.name))
-            .append($('<div>').addClass('shop-floor-number').text(shopRow.shop_location_text))
+        var imgSrc = shopRow.featured ? shopRow.featured : shopRow.thumbnail;
+        shopVerticalCenterer.append($('<img>').attr('src', imgSrc));
+        
+        shopVerticalCenterer.append(
+            $('<div>')
+                .addClass('shop-info')
+                .append($('<div>').addClass('shop-name').text(shopRow.name))
+                .append($('<div>').addClass('shop-floor-number').text(shopRow.shop_location_text))
         );
-        var shopInfoMobile = '<div class="content-for-mobile" style="display: none">' +
-                                '<h5>'+ shopRow.name +'</h5>' +
-                                '<div class="shop-name">' +
-                                    '<span class="icon">' +
-                                        '<svg width="12" height="18" viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">'+
-                                            '<path d="M5.99984 8.58342C5.4473 8.58342 4.9174 8.36392 4.5267 7.97322C4.136 7.58252 3.9165 7.05262 3.9165 6.50008C3.9165 5.94755 4.136 5.41764 4.5267 5.02694C4.9174 4.63624 5.4473 4.41675 5.99984 4.41675C6.55237 4.41675 7.08228 4.63624 7.47298 5.02694C7.86368 5.41764 8.08317 5.94755 8.08317 6.50008C8.08317 6.77367 8.02928 7.04458 7.92459 7.29734C7.81989 7.5501 7.66643 7.77977 7.47298 7.97322C7.27952 8.16668 7.04986 8.32013 6.79709 8.42483C6.54433 8.52953 6.27342 8.58342 5.99984 8.58342ZM5.99984 0.666748C4.45274 0.666748 2.96901 1.28133 1.87505 2.37529C0.781085 3.46925 0.166504 4.95299 0.166504 6.50008C0.166504 10.8751 5.99984 17.3334 5.99984 17.3334C5.99984 17.3334 11.8332 10.8751 11.8332 6.50008C11.8332 4.95299 11.2186 3.46925 10.1246 2.37529C9.03066 1.28133 7.54693 0.666748 5.99984 0.666748Z" fill="#73D4D4"></path>'+
-                                        '</svg>'+
-                                    '</span>'+
-                                    '<span>'+ shopRow.shop_location_text +'</span>'+
-                                '</div>'+
-
-                                '<div class="oppen-hour">'+
-                                    '<span class="icon">'+
-                                        '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">'+
-                                            '<path d="M7 0C3.13418 0 0 3.13418 0 7C0 10.8658 3.13418 14 7 14C10.8658 14 14 10.8658 14 7C14 3.13418 10.8658 0 7 0ZM10.2308 8.07692H7C6.85719 8.07692 6.72023 8.02019 6.61925 7.91921C6.51827 7.81823 6.46154 7.68127 6.46154 7.53846V2.69231C6.46154 2.5495 6.51827 2.41254 6.61925 2.31156C6.72023 2.21058 6.85719 2.15385 7 2.15385C7.14281 2.15385 7.27977 2.21058 7.38075 2.31156C7.48173 2.41254 7.53846 2.5495 7.53846 2.69231V7H10.2308C10.3736 7 10.5105 7.05673 10.6115 7.15771C10.7125 7.25869 10.7692 7.39565 10.7692 7.53846C10.7692 7.68127 10.7125 7.81823 10.6115 7.91921C10.5105 8.02019 10.3736 8.07692 10.2308 8.07692Z" fill="#73D4D4"></path>'+
-                                        '</svg>'+
-                                    '</span>';
-                                    if(shopRow.opening_hours.length > 0) {
-                                        shopInfoMobile += '<span>';
-                                            for(let index = 0; index < shopRow.opening_hours.length; index++) {
-                                                shopInfoMobile += '<span>'+ shopRow.opening_hours[index] +'</span>';
-                                                if(index < shopRow.opening_hours.length - 1) {
-                                                    shopInfoMobile += '<br>';
-                                                }
-                                            }
-                                        shopInfoMobile += '</span>';
-                                    } else {
-                                        shopInfoMobile += '<span>'+ shopRow.open_hours +'</span>';
-                                    }
-            shopInfoMobile +=   '</div>';
-            
-            shopInfoMobile +=   '<div class="phone-number">'+
-                                    '<span class="icon">'+
-                                        '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">'+
-                                            '<path d="M12.4496 15.9696C9.32577 15.9655 6.33105 14.7228 4.12217 12.5139C1.91328 10.305 0.670553 7.31029 0.666504 4.18646C0.666504 3.253 1.03732 2.35777 1.69738 1.69771C2.35744 1.03765 3.25267 0.666835 4.18613 0.666835C4.3838 0.66533 4.58113 0.683269 4.77529 0.720395C4.96298 0.74817 5.1475 0.794299 5.32618 0.85812C5.45186 0.902214 5.56384 0.978348 5.65107 1.07899C5.73829 1.17964 5.79774 1.30131 5.82352 1.43197L6.87176 6.02279C6.90001 6.1474 6.89661 6.2771 6.86186 6.40006C6.82711 6.52302 6.76212 6.63532 6.67282 6.72671C6.57336 6.83383 6.5657 6.84148 5.62459 7.33117C6.37824 8.98452 7.70055 10.3123 9.3508 11.0727C9.84814 10.1239 9.85579 10.1163 9.96291 10.0168C10.0543 9.9275 10.1666 9.86251 10.2896 9.82776C10.4125 9.79301 10.5422 9.78961 10.6668 9.81786L15.2577 10.8661C15.3841 10.8954 15.5011 10.9565 15.5974 11.0435C15.6938 11.1305 15.7665 11.2406 15.8085 11.3634C15.8731 11.545 15.9218 11.7319 15.9539 11.922C15.9847 12.1143 16.0001 12.3087 15.9998 12.5035C15.9857 13.433 15.6045 14.3191 14.9393 14.9685C14.2742 15.6179 13.3791 15.9777 12.4496 15.9696Z" fill="#73D4D4"></path>'+
-                                        '</svg>'+
-                                    '</span>'+
-                                    '<span>'+ shopRow.phone +'</span>'+
-                                '</div>';
-                                if(shopRow.privileges) {
-                                    shopInfoMobile += '<ul class="listmenu list-icon" style="display: flex">';
-                                    var privileges_array = Object.keys(shopRow.privileges).map((key) => [key, shopRow.privileges[key]]);
-                                    for (var i = 0; i < privileges_array.length; i++) {
-                                        //console.log(privileges_array[i]);
-                                        shopInfoMobile += '<li><img src="'+ privileges_array[i][1] +'"/></li>';
-                                    }
-                                    shopInfoMobile += '</ul>';
-                                }
-                                // '<ul class="listmenu list-icon" style="display: flex">'+
-                                //     '<li>'+
-                                //         '<svg width="23" height="15" viewBox="0 0 23 15" fill="none" xmlns="http://www.w3.org/2000/svg">'+
-                                //             '<rect x="1.16953" y="0.4" width="21.2" height="14.2" rx="1.6" stroke="black" stroke-width="0.8"></rect>'+
-                                //             '<path d="M12.0391 12C10.8371 12 9.70701 11.5319 8.85707 10.682C8.00713 9.83205 7.53906 8.70199 7.53906 7.5C7.53906 6.29801 8.00715 5.16796 8.85707 4.31801C9.70699 3.46805 10.8371 3 12.0391 3C13.2411 3 14.3711 3.46807 15.2211 4.31801C16.071 5.16795 16.5391 6.29801 16.5391 7.5C16.5391 8.70199 16.071 9.83204 15.2211 10.682C14.3711 11.5319 13.2411 12 12.0391 12ZM12.0391 3.5625C9.86792 3.5625 8.10156 5.32886 8.10156 7.5C8.10156 9.67114 9.86792 11.4375 12.0391 11.4375C14.2102 11.4375 15.9766 9.67114 15.9766 7.5C15.9766 5.32886 14.2102 3.5625 12.0391 3.5625Z" fill="black"></path>'+
-                                //             '<path d="M12.0391 7.21875C11.6514 7.21875 11.3359 6.90333 11.3359 6.51562C11.3359 6.12792 11.6514 5.8125 12.0391 5.8125C12.4268 5.8125 12.7422 6.12792 12.7422 6.51562C12.7422 6.67095 12.8681 6.79688 13.0234 6.79688C13.1788 6.79688 13.3047 6.67095 13.3047 6.51562C13.3047 5.91444 12.8832 5.41017 12.3203 5.28189V4.96875C12.3203 4.81343 12.1944 4.6875 12.0391 4.6875C11.8837 4.6875 11.7578 4.81343 11.7578 4.96875V5.28189C11.1949 5.41017 10.7734 5.91444 10.7734 6.51562C10.7734 7.21349 11.3412 7.78125 12.0391 7.78125C12.4268 7.78125 12.7422 8.09667 12.7422 8.48438C12.7422 8.87208 12.4268 9.1875 12.0391 9.1875C11.6514 9.1875 11.3359 8.87208 11.3359 8.48438C11.3359 8.32905 11.21 8.20312 11.0547 8.20312C10.8993 8.20312 10.7734 8.32905 10.7734 8.48438C10.7734 9.08556 11.1949 9.58983 11.7578 9.71811V10.0312C11.7578 10.1866 11.8837 10.3125 12.0391 10.3125C12.1944 10.3125 12.3203 10.1866 12.3203 10.0312V9.71811C12.8832 9.58983 13.3047 9.08556 13.3047 8.48438C13.3047 7.78651 12.7369 7.21875 12.0391 7.21875Z" fill="black"></path>'+
-                                //         '</svg>'+
-                                //     '</li>'+
-                                // '</ul>';
-                            shopInfoMobile += '</div>';
+        
+        let shopInfoMobile = `<div class="content-for-mobile" style="display: none">
+            <h5>${shopRow.name}</h5>
+            <div class="shop-name">
+                <span class="icon">
+                    <svg width="12" height="18" viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.99984 8.58342C5.4473 8.58342 4.9174 8.36392 4.5267 7.97322C4.136 7.58252 3.9165 7.05262 3.9165 6.50008C3.9165 5.94755 4.136 5.41764 4.5267 5.02694C4.9174 4.63624 5.4473 4.41675 5.99984 4.41675C6.55237 4.41675 7.08228 4.63624 7.47298 5.02694C7.86368 5.41764 8.08317 5.94755 8.08317 6.50008C8.08317 6.77367 8.02928 7.04458 7.92459 7.29734C7.81989 7.5501 7.66643 7.77977 7.47298 7.97322C7.27952 8.16668 7.04986 8.32013 6.79709 8.42483C6.54433 8.52953 6.27342 8.58342 5.99984 8.58342ZM5.99984 0.666748C4.45274 0.666748 2.96901 1.28133 1.87505 2.37529C0.781085 3.46925 0.166504 4.95299 0.166504 6.50008C0.166504 10.8751 5.99984 17.3334 5.99984 17.3334C5.99984 17.3334 11.8332 10.8751 11.8332 6.50008C11.8332 4.95299 11.2186 3.46925 10.1246 2.37529C9.03066 1.28133 7.54693 0.666748 5.99984 0.666748Z" fill="#73D4D4"></path>
+                    </svg>
+                </span>
+                <span>${shopRow.shop_location_text}</span>
+            </div>
+            <div class="oppen-hour">
+                <span class="icon">${shopRow.opening_hours.length > 0 ? shopRow.opening_hours.join('<br>') : shopRow.open_hours}</span>
+            </div>
+            <div class="phone-number">
+                <span class="icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.4496 15.9696C9.32577 15.9655 6.33105 14.7228 4.12217 12.5139C1.91328 10.305 0.670553 7.31029 0.666504 4.18646C0.666504 3.253 1.03732 2.35777 1.69738 1.69771C2.35744 1.03765 3.25267 0.666835 4.18613 0.666835C4.3838 0.66533 4.58113 0.683269 4.77529 0.720395C4.96298 0.74817 5.1475 0.794299 5.32618 0.85812C5.45186 0.902214 5.56384 0.978348 5.65107 1.07899C5.73829 1.17964 5.79774 1.30131 5.82352 1.43197L6.87176 6.02279C6.90001 6.1474 6.89661 6.2771 6.86186 6.40006C6.82711 6.52302 6.76212 6.63532 6.67282 6.72671C6.57336 6.83383 6.5657 6.84148 5.62459 7.33117C6.37824 8.98452 7.70055 10.3123 9.3508 11.0727C9.84814 10.1239 9.85579 10.1163 9.96291 10.0168C10.0543 9.9275 10.1666 9.86251 10.2896 9.82776C10.4125 9.79301 10.5422 9.78961 10.6668 9.81786L15.2577 10.8661C15.3841 10.8954 15.5011 10.9565 15.5974 11.0435C15.6938 11.1305 15.7665 11.2406 15.8085 11.3634C15.8731 11.545 15.9218 11.7319 15.9539 11.922C15.9847 12.1143 16.0001 12.3087 15.9998 12.5035C15.9857 13.433 15.6045 14.3191 14.9393 14.9685C14.2742 15.6179 13.3791 15.9777 12.4496 15.9696Z" fill="#73D4D4"></path>
+                    </svg>
+                </span>
+                <span>${shopRow.phone}</span>
+            </div>
+        </div>`;
+        
         shopVerticalCenterer.append(shopInfoMobile);
         shopListShop.append(shopVerticalCenterer);
-        shopList.append(shopListShop);
+        fragment.appendChild(shopListShop[0]);
     }
+    shopList.append(fragment);
+}
+$(document).ready(function() {
+    $('#triggerShopLoad').click(function(event) {
+        event.preventDefault(); 
+        loadShopData();       
+        return false;         
+    });
+});
+// Append everything at once to the shopList
+shopList.append(fragment);
 
     function menuSearchFloor(floor) {
         if (floor == null) {
@@ -12624,7 +12611,7 @@ var my_ajax = {"ajax_url":"http:\/\/localhost\/tsue\/wp-admin\/admin-ajax.php"};
 var scriptData = {"previousText":"PREV","nextText":"NEXT"};
 </script>
 <script src="http://localhost/tsue/wp-content/themes/tsuen-wan/assets/js/nearby.js?ver=1728039015" id="nearby-js"></script>
-<script src="http://localhost/tsue/wp-content/themes/tsuen-wan/assets/js/pageController.js?ver=1728041273" id="pageController-js"></script>
+<script src="http://localhost/tsue/wp-content/themes/tsuen-wan/assets/js/pageController.js?ver=1728107268" id="pageController-js"></script>
 <script src="http://localhost/tsue/wp-content/themes/tsuen-wan/assets/js/popper.min.js?ver=1728039015" id="popper.min-js"></script>
 <script src="http://localhost/tsue/wp-content/themes/tsuen-wan/assets/js/shop.js?ver=1728039015" id="shop-js"></script>
 <script id="shoppings-js-extra">
@@ -12765,4 +12752,4 @@ images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.adde
 if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="http://localhost/tsue/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>function lazyLoadThumb(e){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script></body>
 
 </html>
-<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1728062449 -->
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1728110124 -->

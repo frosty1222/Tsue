@@ -757,7 +757,7 @@ App.controller('ShopController', ['$scope','$sce', '$http', function($scope,$sce
     var default_phase = "phase_1";
 
     $scope.init = function($content_type){
-        $scope.sort = "category"
+        $scope.sort="category"
         $scope.display = 'grid';
         $scope.is_floorplan = false;
         $scope.type=$content_type;
@@ -768,7 +768,6 @@ App.controller('ShopController', ['$scope','$sce', '$http', function($scope,$sce
         $scope.sortBy='primary_slug';
         $scope.get_shops();
     }
-
     $scope.resetFilter = function(currentSort){
         if($scope.sortBy == currentSort){
             $scope.reverse = ! $scope.reverse;
@@ -853,6 +852,9 @@ App.controller('ShopController', ['$scope','$sce', '$http', function($scope,$sce
         }
         $scope.is_floorplan = false;
         $scope.reset_sorts("others");
+    }
+    $scope.showListShop = function(){
+
     }
     $scope.get_shops_by_char = function(char){
         $scope.char = char;

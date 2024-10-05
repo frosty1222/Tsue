@@ -13,7 +13,7 @@
                 <ul class="shop-menu_container tab-menu listmenu">
                     <?php foreach( $menu as $item) : ?>
                     <li class="shop-menu_btn <?= ($item == 'Category')? 'active': '';?> ">
-                        <a href="#tab_<?= sanitize_title($item);?>" data-href-mobile="#tab_mobile_<?= sanitize_title($item);?>" class="shop-menu_control" data-post-type="<?= $post_type; ?>">
+                        <a href="#tab_<?= sanitize_title($item);?>" data-href-mobile="#tab_mobile_<?= sanitize_title($item);?>" class="shop-menu_control" data-post-type="<?= $post_type; ?>" onclick="loadShopData()">
                             <?= pll__($item)?>
                         </a>
                     </li>
