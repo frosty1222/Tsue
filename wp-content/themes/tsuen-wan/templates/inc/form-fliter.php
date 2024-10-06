@@ -10,15 +10,21 @@
     <form method="get" class="filter">
         <div class="shop-menu">
             <div class="shop-top-menu">
-                <ul class="shop-menu_container tab-menu listmenu">
-                    <?php foreach( $menu as $item) : ?>
-                    <li class="shop-menu_btn <?= ($item == 'Category')? 'active': '';?> ">
-                        <a href="#tab_<?= sanitize_title($item);?>" data-href-mobile="#tab_mobile_<?= sanitize_title($item);?>" class="shop-menu_control" data-post-type="<?= $post_type; ?>" onclick="loadShopData()">
-                            <?= pll__($item)?>
-                        </a>
-                    </li>
-                    <?php endforeach; ?>
-                </ul>
+            <ul class="shop-menu_container tab-menu listmenu">
+                <?php foreach($menu as $item) : ?>
+                <li class="shop-menu_btn <?= ($item == 'Category') ? 'active' : ''; ?>">
+                    <a href="#tab_<?= sanitize_title($item);?>" 
+                    data-href-mobile="#tab_mobile_<?= sanitize_title($item);?>" 
+                    class="shop-menu_control" 
+                    data-post-type="<?= $post_type; ?>" 
+                    <?php if ($item == 'Floor Plan') : ?>id="triggerShopLoad"<?php endif; ?> 
+                    onclick="<?= ($item == 'Floor Plan') ? 'loadShopData()' : ''; ?>">
+                        <?= pll__($item) ?>
+                    </a>
+                </li>
+                <?php endforeach; ?>
+            </ul>
+
                 <div class="filter-search">
                     <a href="#" class="button-search">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

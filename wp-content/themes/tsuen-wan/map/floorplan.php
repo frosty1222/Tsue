@@ -519,6 +519,7 @@ $current_path = get_template_directory_uri() . "/map/";
     }
     $(document).ready(function() {
         $('#triggerShopLoad').click(function(event) {
+            console.log(12312)
             event.preventDefault(); 
             loadShopData();       
             return false;         
